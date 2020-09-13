@@ -1,39 +1,42 @@
 package com.example.queenb;
 
 import androidx.annotation.NonNull;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-public class PagerAdapter extends FragmentPagerAdapter{
-    private int numOfTabs;
-    public PagerAdapter(FragmentManager fm, int numOftabs){
-        super(fm);
-        this.numOfTabs = numOfTabs;
+
+import java.util.ArrayList;
+
+public class PagerAdapter extends FragmentStateAdapter {
+    //private int numOfTabs;
+    private ArrayList<Fragment> mylist;
+    private void initTabs(){
+        mylist=new ArrayList<Fragment>();
+        mylist.add(new InfoF());
+        mylist.add(new NoasF());
+
+        mylist.add(new KimsF());
+        mylist.add(new SharonsF());
+        mylist.add(new SmadarsF());
     }
+
+    public PagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
+        initTabs();
+    }
+
     @NonNull
     @Override
-    public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                return new InfoF();
-            case 1:
-                return new NoasF();
-            case 2:
-                return new KimsF();
-            case 3:
-                return new SmadarsF();
-            case 4:
-                return new SharonsF();
-            default:
-                return null;
-
-        }
-        //return null;
+    public Fragment createFragment(int position) {
+        return mylist.get(position);
     }
 
     @Override
-    public int getCount() {
-        return numOfTabs;
+    public int getItemCount() {
+        return mylist.size();
     }
 }
