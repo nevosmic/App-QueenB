@@ -1,5 +1,6 @@
 package com.example.queenb;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,58 +8,53 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SmadarsF#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class SmadarsF extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SmadarsF() {
+public class SmadarsF extends Fragment
+{
+    public SmadarsF()
+    {
         // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SmadarsF.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static SmadarsF newInstance(String param1, String param2) {
-        SmadarsF fragment = new SmadarsF();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_smadars, container, false);
+        // graphical initializations heres
+        View v = inflater.inflate(R.layout.fragment_smadars, container, false);
+        //PlayGame button - it will take you to the MainGameActivity
+        Button startTrivia = v.findViewById(R.id.startTrivia);
+        startTrivia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.activity_main,
+                        new MainTriviaF()).addToBackStack(null).commit();
+            }
+        });
+        return v;
     }
+    //=============== open source quiz ==============================
+
+
+/*
+    private void initViews() {
+        //initialize views here
+        playGame =(FButton)findViewById(R.id.playGame);
+        quit = (FButton) findViewById(R.id.quit);
+        tQ = (TextView)findViewById(R.id.tQ);
+
+        //Typeface - this is for fonts style
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
+        playGame.setTypeface(typeface);
+        quit.setTypeface(typeface);
+        tQ.setTypeface(typeface);
+    }*/
 }
