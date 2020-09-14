@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhoAreWe">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="267dp"
+        android:layout_height="449dp"
+        android:contentDescription="@string/photo1"
+        android:src="@drawable/q5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-128dp" />
+
+    <ImageView
+        android:layout_width="385dp"
+        android:layout_height="462dp"
+        android:contentDescription="@string/photo1"
+        android:src="@drawable/q8"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <EditText
+        android:id="@+id/text_who_are_we"
+        android:layout_width="125dp"
+        android:layout_height="197dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="@string/who_are_we1"
+        android:textSize="0.10in"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <EditText
+        android:id="@+id/text_who_are_we2"
+        android:layout_width="391dp"
+        android:layout_height="63dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:text="@string/who_are_we_2"
+        android:textSize="0.10in"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
