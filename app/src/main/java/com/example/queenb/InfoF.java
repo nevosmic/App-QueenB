@@ -78,6 +78,7 @@ public class InfoF extends Fragment {
         AlertDialog alertDialog=new AlertDialog.Builder(this.getActivity())
                 .setView(view)
                 .create();
+        alertDialog.show();
 
     }
 
@@ -86,6 +87,9 @@ public class InfoF extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_info, container, false);
+//        String s = String.valueOf(R.string.text1);
+//        Drawable d = getResources().getDrawable(R.drawable.ic_launcher_foreground);
+//        showDialog(s,d);
         List<InfoNode> myList = initInfo();
         for(InfoNode myNode : myList){
             TextView myT=view.findViewById(myNode.idName);
@@ -97,6 +101,7 @@ public class InfoF extends Fragment {
         //paste here
         beerSheva = view.findViewById(R.id.BeerSheva);
         beerSheva.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 String s = String.valueOf(R.string.text1);
