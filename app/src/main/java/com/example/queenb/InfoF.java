@@ -5,10 +5,15 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +22,6 @@ import android.widget.Button;
  */
 public class InfoF extends Fragment {
 
-    Button BeerSheva,Jerusalm1,Jerusalm2,Jerusalm3;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,6 +57,13 @@ public class InfoF extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        List<InfoNode> myList = initInfo();
+        for(InfoNode myNode : myList){
+            TextView myT=getActivity().findViewById(myNode.idName);
+            String sourceString = "<b>" +myNode.city + "</b> " +myNode.place;
+            //myT.setText(Html.fromHtml(sourceString));
+        }
+
         //paste here
 //        BeerSheva = getView().findViewById(R.id.BeerSheva);
 //        Jerusalm1 = getView().findViewById(R.id.Jerusalem1);
@@ -79,5 +90,21 @@ public class InfoF extends Fragment {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_info, container, false);
+    }
+    private List<InfoNode> initInfo() {
+        List<InfoNode> output = new ArrayList<>();
+        output.add(new InfoNode(R.id.BeerSheva,"באר-שבע","אוניברסיטת בו-גוריון"));
+        output.add(new InfoNode(R.id.Jerusalem1,"ירושלים","האוניברסיטה העברית, קמפוס גבעת רם"));
+        output.add(new InfoNode(R.id.Jerusalem2,"ירושלים","המרכז לחדשנות טכנולוגית,גוננים"));
+        output.add(new InfoNode(R.id.Jerusalem3,"ירושלים","מזרח ירושלים"));
+        output.add(new InfoNode(R.id.Modiin,"חבל מודיעין","באופן מקוון"));
+        output.add(new InfoNode(R.id.TelAviv1,"תל-אביב יפו","דרום ומזרח העיר"));
+        output.add(new InfoNode(R.id.TelAviv2,"תל-אביב יפו","דרום ומזרח העיר"));
+        output.add(new InfoNode(R.id.Hertzelia,"הרצליה","חברת Microsoft"));
+        output.add(new InfoNode(R.id.KfarSaba,"כפר-סבא","חברת Western Digital"));
+        output.add(new InfoNode(R.id.Haifa1,"חיפה","הטכניון"));
+        output.add(new InfoNode(R.id.Haifa1,"חיפה","אוניברסיטת חיפה"));
+
+        return output;
     }
 }
