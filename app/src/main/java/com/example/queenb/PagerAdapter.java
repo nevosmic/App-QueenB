@@ -18,7 +18,6 @@ public class PagerAdapter extends FragmentStateAdapter {
         mylist=new ArrayList<Fragment>();
         mylist.add(new InfoF());
         mylist.add(new NoasF());
-
         mylist.add(new KimsF());
         mylist.add(new SharonsF());
         mylist.add(new SmadarsF());

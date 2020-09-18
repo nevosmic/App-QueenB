@@ -16,28 +16,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InfoF extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-    Button beerSheva,jerusalem1;
+    //buttons
+    Button beerSheva,jerusalem1,jerusalem2,jerusalem3,modiin,telAviv1,telAviv2,hertzelia,kfarsaba,haifa1,haifa2;
 
     public InfoF() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
+
     public static InfoF newInstance(String param1, String param2) {
         InfoF fragment = new InfoF();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -85,36 +73,55 @@ public class InfoF extends Fragment {
              myT.setText(Html.fromHtml(sourceString));
         }
 
-        //paste here
+
         beerSheva = view.findViewById(R.id.BeerSheva);
+        String s1 = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n במוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳ \nקבוצת ממשיכות (כיתה ט׳) ביום ד׳\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        Drawable d1 = getResources().getDrawable(R.drawable.photo1);
+        Drawable d2 = getResources().getDrawable(R.drawable.therealqueenb);
+        setOnClick(beerSheva, s1, s2, d1,d2);
 
-        beerSheva.setOnClickListener(new View.OnClickListener() {
+        jerusalem1 = view.findViewById(R.id.Jerusalem1);
+        String s3 = "הפעילות תתקיים בקמפוס גבעת רם של האוניברסיטה העברית בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s4 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳, ב׳, ד׳ וה׳ \nקבוצות ממשיכות (כיתה ט׳) \nקבוצת למידה (כיתה י׳) ביום ב׳/ד׳ \n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(jerusalem1, s3, s4, d1,d2);
 
-            @Override
-            public void onClick(View view) {
-                String s = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון";
-                String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n" +
-                        "במוקד יפתחו\n" +
-                        "קבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳\n" +
-                        "קבוצת ממשיכות (כיתה ט׳) ביום ד׳";
-               // String s2 = Resources.getSystem().getString(R.string.text1);;
-                       // String.valueOf();
-                Drawable d = getResources().getDrawable(R.drawable.ic_launcher_foreground);
-                Drawable d2 = getResources().getDrawable(R.drawable.ic_launcher_foreground);
-              //  Drawable d = ContextCompat.getDrawable(getActivity(), R.drawable.photo2);
-                showDialog(s,s2,d,d2);
-            }
-        });
+        jerusalem2 = view.findViewById(R.id.Jerusalem2);
+        String s5 = "הפעילות תתקיים במרכז החדשנות גוננים בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s6 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nההרשמה למוקד זה תפתח בקרוב.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(jerusalem2, s5, s6, d1,d2);
 
-//        Jerusalm1 = getView().findViewById(R.id.Jerusalem1);
-//        Jerusalm2 = getView().findViewById(R.id.Jerusalem2);
-//        Jerusalm3 = getView().findViewById(R.id.Jerusalem3);
+        jerusalem3 = view.findViewById(R.id.Jerusalem3);
+        String s7 = "מיקום הפעילות יפורסם בהמשך.";
+        String s8 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nיום הפעילות יפורסם בהמשך.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(jerusalem3, s7, s8, d1,d2);
 
+        modiin = view.findViewById(R.id.Modiin);
+        String s9 = "הפעילות תתקיים באופן מקוון\nההרשמה פתוחה לתושבות איזור חבל מודיעין בלבד.";
+        String s10 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nקבוצת מתחילות (כיתה ח')ביום ב'.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(modiin, s9, s10, d1,d2);
+        telAviv1 = view.findViewById(R.id.TelAviv1);
+        setOnClick(telAviv1, s7, s8, d1,d2);
+        telAviv2 = view.findViewById(R.id.TelAviv2);
+        String s11 = "הפעילות תתקיים באוניברסיטת תל-אביב. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s12 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳ וה' \nקבוצות ממשיכות (כיתה ט׳) בימים א' וה' \nמרכז למידה (כיתה י׳) בשרונה האב בימי א'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(telAviv2, s11, s12, d1,d2);
+        hertzelia = view.findViewById(R.id.Hertzelia);
+        String s13 = "הפעילות תתקיים במשרדי חברת מיקרוסופט בהרצליה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s14 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד תפתח קבוצת מתחילות (כיתה ח') ביום ב'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(telAviv2, s11, s12, d1,d2);
+        kfarsaba = view.findViewById(R.id.KfarSaba);
+        String s15 ="הפעילות תתקיים במשרדי חברת ווסטרן דיגיטל בכפר-סבא. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s16 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצת מתחילות (כיתה ח׳) בעברית ביום ד' \nקבוצת מתחילות (כיתה ח׳) בערבית ביום ד' \nקבוצת ממשיכות (כיתה ט׳) דו-לשונית ביום ד'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(kfarsaba, s15, s16, d1,d2);
+        haifa1 = view.findViewById(R.id.Haifa1);
+        String s17 ="הפעילות תתקיים בקמפוס הטכניון בחיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String s18 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א' וה' \nקבוצות ממשיכות (כיתה ט׳) בימים א' וה' \n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
+        setOnClick(haifa1, s17, s18, d1,d2);
+        haifa2 = view.findViewById(R.id.Haifa2);
+        String s19 ="הפעילות תתקיים באוניברסיטת חיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+       setOnClick(haifa2, s19, s6, d1,d2);
 
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
         // Inflate the layout for this fragment
         return view;
 
@@ -131,10 +138,19 @@ public class InfoF extends Fragment {
         output.add(new InfoNode(R.id.Hertzelia,"הרצליה","חברת Microsoft"));
         output.add(new InfoNode(R.id.KfarSaba,"כפר-סבא","חברת Western Digital"));
         output.add(new InfoNode(R.id.Haifa1,"חיפה","הטכניון"));
-        output.add(new InfoNode(R.id.Haifa1,"חיפה","אוניברסיטת חיפה"));
+        output.add(new InfoNode(R.id.Haifa2,"חיפה","אוניברסיטת חיפה"));
 
         return output;
     }
 
+    private void setOnClick(Button btn,final String str1, final String str2, final Drawable d1, final Drawable d2){
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                showDialog(str1,str2,d1,d2);
+            }
+        });
+    }
 
 }
