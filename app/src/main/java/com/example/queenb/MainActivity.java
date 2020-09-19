@@ -1,31 +1,36 @@
 package com.example.queenb;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
+import androidx.fragment.app.FragmentActivity;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends FragmentActivity {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container) != null) {
 
-//        TabItem InfoTab =  findViewById(R.id.InfoTab);
-//        TabItem SmadarsTab =  findViewById(R.id.SmadarsTab);
-//        TabItem SharonsTab =  findViewById(R.id.SharonsTab);
-//        TabItem KimsTab =  findViewById(R.id.KimsTab);
-//        TabItem NoasTab =  findViewById(R.id.NoasTab);
-        final ViewPager2 viewPager= findViewById(R.id.viewPager);
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+            if (savedInstanceState != null) {
+                return;
+            }
 
-        PagerAdapter pagerAdapter =new PagerAdapter(getSupportFragmentManager(),this.getLifecycle());
-        viewPager.setAdapter(pagerAdapter);
+            // Create a new Fragment to be placed in the activity layout
+            MainFragment firstFragment = new MainFragment();
 
+            // In case this activity was started with special instructions from an
+            // Intent, pass the Intent's extras to the fragment as arguments
+            firstFragment.setArguments(getIntent().getExtras());
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, firstFragment).commit();
+        }
     }
 }
