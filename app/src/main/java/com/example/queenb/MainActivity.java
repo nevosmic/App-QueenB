@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TabLayout tabLayout = findViewById(R.id.tabBar);
 
 
 //        TabItem InfoTab =  findViewById(R.id.InfoTab);
@@ -27,25 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
         PagerAdapter pagerAdapter =new PagerAdapter(getSupportFragmentManager(),this.getLifecycle());
         viewPager.setAdapter(pagerAdapter);
-        //tabLayout.setupWithViewPager(viewPager);
-
-        tabLayout.addOnTabSelectedListener(new OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
 
     }
 }
