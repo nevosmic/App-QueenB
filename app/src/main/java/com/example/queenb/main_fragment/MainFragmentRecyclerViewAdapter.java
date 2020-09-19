@@ -1,4 +1,4 @@
-package com.example.queenb;
+package com.example.queenb.main_fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,34 +8,31 @@ import android.widget.Button;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.queenb.dummy.DummyContent.DummyItem;
+import com.example.queenb.R;
+import com.example.queenb.main_fragment.MainFragmentContent.MainFragmentButtonItem;
 
 import java.util.List;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem}.
- * TODO: Replace the implementation with code for your data type.
- */
-public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
+public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFragmentRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<MainFragmentButtonItem> mItems;
     private final FragmentActivity mActivity;
-    public MyItemRecyclerViewAdapter(FragmentActivity activity, List<DummyItem> items) {
+    public MainFragmentRecyclerViewAdapter(FragmentActivity activity, List<MainFragmentButtonItem> items) {
         mActivity = activity;
-        mValues = items;
+        mItems = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_item, parent, false);
+                .inflate(R.layout.fragment_main_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mBtn.setText(mValues.get(position).text);
+        holder.mItem = mItems.get(position);
+        holder.mBtn.setText(mItems.get(position).text);
         holder.mBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -48,18 +45,18 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return mItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final Button mBtn;
-        public DummyItem mItem;
+        public MainFragmentButtonItem mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mBtn = (Button) view.findViewById(R.id.item_btn_name);
+            mBtn = (Button) view.findViewById(R.id.item_btn_id);
         }
     }
 }

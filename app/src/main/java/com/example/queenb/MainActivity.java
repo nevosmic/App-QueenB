@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 
+import com.example.queenb.main_fragment.MainFragment;
+
 public class MainActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class MainActivity extends FragmentActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            ItemFragment firstFragment = new ItemFragment();
+            MainFragment firstFragment = new MainFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
