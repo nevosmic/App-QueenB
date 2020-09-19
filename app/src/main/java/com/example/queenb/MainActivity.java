@@ -22,7 +22,7 @@ public class MainActivity extends FragmentActivity {
             }
 
             // Create a new Fragment to be placed in the activity layout
-            MainFragment firstFragment = new MainFragment();
+            ItemFragment firstFragment = new ItemFragment();
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
