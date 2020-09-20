@@ -2,6 +2,19 @@
     <string name="app_name">QueenB</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name ="jerusalem1">ירושלים</string>
-    <string name="text1">הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון</string>
+    <string name="jerusalem1">ירושלים</string>
+    <string name="string">Noa</string>
+    <string name="photo2">string</string>
+    <string name="photo1">string</string>
+    <string name="photo3">string</string>
+    <string name="photo4">string</string>
+    <string name="photo5">string</string>
+    <string name="todo">TODO</string>
+    <string name="photo6">string</string>
+    <string name="string2">מי אנחנו?</string>
+    <string name="photo7">string</string>
+    <string name="photo8">string</string>
+    <string name="photo9">string</string>
+    <string name="who_are_we1"> עמותת QueenB היא עמותה שהוקמה על-ידי סטודנטיות למדעי המחשב לאור מיעוט הנשים סביבן.</string>
+    <string name="who_are_we_2">מתוך רצון לשנות מציאות זו, העמותה שמה לעצמה למטרה להעלות את הייצוג הנשי בתחום הטכנולוגי. </string>
 </resources>

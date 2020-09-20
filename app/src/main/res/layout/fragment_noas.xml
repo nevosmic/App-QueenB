@@ -1,14 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoasF">
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Noa" />
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="172dp"
+        android:layout_height="364dp"
+        android:contentDescription="@string/photo1"
+        android:src="@drawable/q1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="-50dp" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="364dp"
+        android:contentDescription="@string/photo1"
+        android:src="@drawable/q7"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <ImageView
+        android:layout_width="198dp"
+        android:layout_height="360dp"
+        android:contentDescription="@string/photo2"
+        android:src="@drawable/q2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/who_are_we"
+        android:layout_width="173dp"
+
+        android:layout_height="55dp"
+        android:background="@color/white"
+        android:text="@string/string2"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="240dp"
+        android:contentDescription="@string/photo3"
+        android:src="@drawable/q3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <ImageView
+        android:layout_width="198dp"
+        android:layout_height="260dp"
+        android:contentDescription="@string/photo3"
+        android:src="@drawable/q9"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <ImageView
+        android:layout_width="198dp"
+        android:layout_height="273dp"
+        android:contentDescription="@string/photo2"
+        android:src="@drawable/q4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
