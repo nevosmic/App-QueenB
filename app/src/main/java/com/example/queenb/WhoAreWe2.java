@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class WhoAreWe extends AppCompatActivity {
+public class WhoAreWe2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_who_are_we_scroll);
+        setContentView(R.layout.activity_who_are_we2);
     }
 }
