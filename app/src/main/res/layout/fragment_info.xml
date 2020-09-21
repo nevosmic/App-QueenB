@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".InfoF"
     android:orientation="vertical"
-    android:background="@color/black">
+    android:background="@drawable/background3"
+    >
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,10 +17,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="לחצו על מוקד הפעילות הקרוב לביתכם לפרטים נוספים"
+
+                android:text="לחצו על מוקד הפעילות הקרוב \n לביתכם לפרטים נוספים"
                 android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
                 android:textSize="25dp">
 
             </TextView>
@@ -32,27 +34,37 @@
                 android:columnOrderPreserved="false"
                 android:rowCount="4">
 
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginLeft="30dp"
                     android:layout_margin="10dp">
 
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard2"
+                            android:background="#fabebd">
+
+                        </ImageView>
 
                         <Button
                             android:id="@+id/BeerSheva"
                             android:layout_width="match_parent"
-
                             android:layout_height="match_parent"
-                            android:background="@color/white"
                             android:text="באר שבע"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
+                            android:background="#fabebd"
 
                             ></Button>
                     </LinearLayout>
@@ -61,21 +73,31 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard3"
+                            android:background="#fabebd">
+
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Jerusalem1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="ירושלים"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -91,15 +113,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd"
+                        >
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard5"
+                            android:background="#fabebd">
+
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Jerusalem2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="ירושלים"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -115,16 +147,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard1"
+                            android:background="#fabebd">
+
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Jerusalem3"
                             android:layout_width="match_parent"
-
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="ירושלים"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -140,15 +180,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard6"
+                            android:background="#fabebd">
+
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Modiin"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="מודיעין"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
                             ></Button>
                     </LinearLayout>
@@ -164,16 +213,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard4"
+                            android:background="#fabebd">
+                        </ImageView>
+
 
                         <Button
                             android:id="@+id/TelAviv1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="תל-אביב יפו"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
+                            
 
                             ></Button>
                     </LinearLayout>
@@ -189,15 +249,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard3"
+                            android:background="#fabebd">
+                        </ImageView>
+
 
                         <Button
                             android:id="@+id/TelAviv2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="תל-אביב יפו"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -214,16 +283,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard5"
+                            android:background="#fabebd">
+                        </ImageView>
+
 
                         <Button
                             android:id="@+id/Hertzelia"
                             android:layout_width="match_parent"
-
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="הרצליה"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -240,15 +317,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard2"
+                            android:background="#fabebd">
+                        </ImageView>
 
                         <Button
                             android:id="@+id/KfarSaba"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="כפר-סבא"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -265,15 +350,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard1"
+                            android:background="#fabebd">
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Haifa1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="חיפה"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>
@@ -290,15 +383,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:background="#fabebd">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="@android:dimen/app_icon_size"
+                            android:src="@drawable/pinboard7"
+                            android:background="#fabebd">
+                        </ImageView>
 
                         <Button
                             android:id="@+id/Haifa2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/white"
+                            android:background="#fabebd"
                             android:text="חיפה"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="19dp"
 
                             ></Button>

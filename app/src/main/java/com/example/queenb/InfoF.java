@@ -78,7 +78,7 @@ public class InfoF extends Fragment {
         String s1 = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
         String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n במוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳ \nקבוצת ממשיכות (כיתה ט׳) ביום ד׳\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
         Drawable d1 = getResources().getDrawable(R.drawable.photo1);
-        Drawable d2 = getResources().getDrawable(R.drawable.therealqueenb);
+        Drawable d2 = getResources().getDrawable(R.drawable.photo2);
         setOnClick(beerSheva, s1, s2, d1,d2);
 
         jerusalem1 = view.findViewById(R.id.Jerusalem1);
