@@ -22,7 +22,7 @@ public class NoasF extends Fragment {
         // Required empty public constructor
     }
 
-    
+
     public static NoasF newInstance(String param1, String param2) {
         NoasF fragment = new NoasF();
         Bundle args = new Bundle();
