@@ -13,28 +13,31 @@ import com.example.queenb.R;
 /**
  * A fragment representing a list of Items.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment
+{
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public MainFragment() {
+    public MainFragment()
+    {
     }
-    public static MainFragment newInstance(int columnCount) {
+    public static MainFragment newInstance()
+    {
         MainFragment fragment = new MainFragment();
         return fragment;
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         // Set the adapter
-        if (view instanceof RecyclerView) {
+        if (view instanceof RecyclerView)
+        {
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setAdapter(new MainFragmentRecyclerViewAdapter(getActivity(), MainFragmentContent.ITEMS));
         }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trivia.FinalTrivia" >
+
+    <LinearLayout
+        android:id="@+id/LayoutFinal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:text="נגמרו לנו השאלות..!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foregroundGravity="left"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="32dp"
+                android:text="האמת היא שלא משנה לנו על כמה שאלות ענית נכון.../n אנחנו בכל מקרה חושבות שאת מלכה!" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:text="נהיה מאושרות אם תצטרפי אלינו!\n  כי בתכלס - זה ביחד,\n זה כייף, \n זה מגניב,\n וזה יכול להביא אותך כל כך רחוק!\n " />
+
+        <Button
+            android:id="@+id/finishBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            tools:text="לחזרה למסך הראשי" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

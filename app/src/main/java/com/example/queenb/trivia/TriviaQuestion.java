@@ -1,6 +1,6 @@
-package com.example.queenb;
+package com.example.queenb.trivia;
 
-import androidx.fragment.app.Fragment;
+import java.util.ArrayList;
 
 public class TriviaQuestion
 {
@@ -10,9 +10,10 @@ public class TriviaQuestion
     private String opC;
     private String opD;
     private String answer;
+    private String details;
 
     //class constructor
-    public TriviaQuestion(String question, String op_a, String op_b, String op_c, String op_d, String ans)
+    public TriviaQuestion(String question, String op_a, String op_b, String op_c, String op_d, String ans, String details)
     {
         this.question = question;
         this.opA = op_a;
@@ -20,6 +21,7 @@ public class TriviaQuestion
         this.opC = op_c;
         this.opD = op_d;
         this.answer = ans;
+        this.details = details;
     }
 
     public TriviaQuestion() {
@@ -49,6 +51,20 @@ public class TriviaQuestion
 
     public String getOptD() {
         return this.opD;
+    }
+
+    public String getDetails() {
+        return this.details;
+    }
+
+    public ArrayList<String> getOptions()
+    {
+        ArrayList<String> list = new ArrayList<>();
+        list.add(getOptA());
+        list.add(getOptB());
+        list.add(getOptC());
+        list.add(getOptD());
+        return list;
     }
 
     public String getAnswer() {

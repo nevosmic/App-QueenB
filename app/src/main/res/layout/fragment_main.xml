@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list"
     android:name="com.example.queenb.main_fragment.MainFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="2dp"
-    android:layout_marginRight="2dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:paddingTop="270dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".main_fragment.MainFragment"
-    tools:listitem="@layout/fragment_main_item"
-    android:background="@drawable/background1"
-    android:alpha="0.6">
-
-
-
-</androidx.recyclerview.widget.RecyclerView>
-
-
+    tools:listitem="@layout/fragment_main_item" />

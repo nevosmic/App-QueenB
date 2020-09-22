@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trivia.QuestionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="32dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:checkedButton = "@+id/radioBtnAns1">
+
+            <RadioButton
+                android:id="@+id/radioBtnAns1"
+                style="@style/radioButtonStyle" />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns2"
+                style="@style/radioButtonStyle"
+                />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns3"
+                style="@style/radioButtonStyle"
+               />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns4"
+                style="@style/radioButtonStyle"
+                />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="האם צדקת?" />
+
+    </LinearLayout>
+</FrameLayout>
