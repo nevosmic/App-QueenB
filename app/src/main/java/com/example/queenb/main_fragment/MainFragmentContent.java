@@ -16,7 +16,7 @@ public class MainFragmentContent {
     static {
         ITEMS.add(new MainFragmentButtonItem("Info", new InfoF()));
         ITEMS.add(new MainFragmentButtonItem("Smadar", new SmadarsF()));
-        ITEMS.add(new MainFragmentButtonItem("Kim", new KimsF()));
+        ITEMS.add(new MainFragmentButtonItem("Kim", null));//TODO
         ITEMS.add(new MainFragmentButtonItem("Noa", new NoasF()));
         ITEMS.add(new MainFragmentButtonItem("Sharon", new SharonsF()));
     }
