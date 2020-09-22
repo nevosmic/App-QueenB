@@ -14,11 +14,11 @@ import java.util.List;
 public class MainFragmentContent {
     public static final List<MainFragmentButtonItem> ITEMS = new ArrayList<MainFragmentButtonItem>();
     static {
-        ITEMS.add(new MainFragmentButtonItem("Info", new InfoF()));
-        ITEMS.add(new MainFragmentButtonItem("Smadar", new SmadarsF()));
-        ITEMS.add(new MainFragmentButtonItem("Kim", new KimsF()));
-        ITEMS.add(new MainFragmentButtonItem("Noa", new NoasF()));
-        ITEMS.add(new MainFragmentButtonItem("Sharon", new SharonsF()));
+        ITEMS.add(new MainFragmentButtonItem("מי אנחנו?", new NoasF()));
+        ITEMS.add(new MainFragmentButtonItem("טריוויה", new SmadarsF()));
+        ITEMS.add(new MainFragmentButtonItem("הרשמה וסניפים", new InfoF()));
+        ITEMS.add(new MainFragmentButtonItem("בוגרות התוכנית", new KimsF()));
+        ITEMS.add(new MainFragmentButtonItem("פרויקטים של בוגרות התוכנית", new SharonsF()));
     }
 
     public static class MainFragmentButtonItem {
