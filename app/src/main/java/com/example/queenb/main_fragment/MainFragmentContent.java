@@ -17,7 +17,7 @@ public class MainFragmentContent {
         ITEMS.add(new MainFragmentButtonItem("מי אנחנו?", new NoasF()));
         ITEMS.add(new MainFragmentButtonItem("טריוויה", new SmadarsF()));
         ITEMS.add(new MainFragmentButtonItem("הרשמה וסניפים", new InfoF()));
-        ITEMS.add(new MainFragmentButtonItem("בוגרות התוכנית", new KimsF()));
+        ITEMS.add(new MainFragmentButtonItem("בוגרות התוכנית", null));
         ITEMS.add(new MainFragmentButtonItem("פרויקטים של בוגרות התוכנית", new SharonsF()));
     }
 

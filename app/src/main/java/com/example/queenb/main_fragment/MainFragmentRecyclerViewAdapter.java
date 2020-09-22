@@ -1,5 +1,6 @@
 package com.example.queenb.main_fragment;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.queenb.KimsF;
 import com.example.queenb.R;
 import com.example.queenb.main_fragment.MainFragmentContent.MainFragmentButtonItem;
 
@@ -37,10 +39,16 @@ public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFr
             @Override
             public void onClick(View view)
             {
-                mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        holder.mItem.destination).addToBackStack(null).commit();
+                if(holder.mItem.destination == null) {
+                    Intent intent = new Intent(mActivity, KimsF.class);
+                    mActivity.startActivity(intent); //solution
+                } else {
+                    mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            holder.mItem.destination).addToBackStack(null).commit();
+                }
             }
         });
+
     }
 
     @Override
