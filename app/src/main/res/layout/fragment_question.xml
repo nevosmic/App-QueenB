@@ -34,24 +34,18 @@
             android:layout_gravity="start"
             android:checkedButton = "@+id/radioBtnAns1">
 
-            <RadioButton
-                android:id="@+id/radioBtnAns1"
-                style="@style/radioButtonStyle" />
+            <RadioButton android:id="@+id/radioBtnAns1" />
 
             <RadioButton
                 android:id="@+id/radioBtnAns2"
-                style="@style/radioButtonStyle"
+
                 />
 
-            <RadioButton
-                android:id="@+id/radioBtnAns3"
-                style="@style/radioButtonStyle"
-               />
+            <RadioButton android:id="@+id/radioBtnAns3" />
 
             <RadioButton
                 android:id="@+id/radioBtnAns4"
-                style="@style/radioButtonStyle"
-                />
+                style="tonStyle" />
 
         </RadioGroup>
 

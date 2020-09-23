@@ -74,7 +74,7 @@ public class QuestionFragment extends Fragment
             public void onClick(View view)
             {
                 RadioGroup radioGroup = (RadioGroup) mView.findViewById(R.id.radioGroupAnswers);
-                //radioGroup.check(R.id.radioBtnAns1);
+
                 int radioButtonID = radioGroup.getCheckedRadioButtonId();
 
                 RadioButton radioButton = (RadioButton) radioGroup.findViewById(radioButtonID);

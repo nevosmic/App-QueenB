@@ -47,7 +47,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:paddingRight="32dp"
-                android:text="האמת היא שלא משנה לנו על כמה שאלות ענית נכון.../n אנחנו בכל מקרה חושבות שאת מלכה!" />
+                android:text="האמת היא שלא משנה לנו על כמה שאלות ענית נכון...\n אנחנו בכל מקרה חושבות שאת מלכה!" />
         </LinearLayout>
 
         <TextView
@@ -59,14 +59,13 @@
             android:paddingTop="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
-            android:text="נהיה מאושרות אם תצטרפי אלינו!\n  כי בתכלס - זה ביחד,\n זה כייף, \n זה מגניב,\n וזה יכול להביא אותך כל כך רחוק!\n " />
+            android:text="נהיה מאושרות אם תצטרפי אלינו!\n  כי בתכלס - זה ביחד,\n זה כייף, \n זה מגניב, זה מעניין, זה חכם,\n אפשר ליצור בעזרת זה דברים שישנו את העולם,\n וזה יכול להביא אותך כל כך רחוק!\n " />
 
         <Button
             android:id="@+id/finishBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:text="לחזרה למסך הראשי" />
+            android:text="לחזרה למסך הראשי" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

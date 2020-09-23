@@ -55,7 +55,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="32dp"
             android:gravity="center"
-            android:text="הבא" />
+            android:text="לשאלה הבאה" />
 
     </LinearLayout>
 

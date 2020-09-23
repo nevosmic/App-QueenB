@@ -64,10 +64,10 @@ public class AnswerFragment extends Fragment {
         TextView lblIsRight = (TextView) v.findViewById(R.id.lblIsRight);
         if (mIsRight)
         {
-            lblIsRight.setText("צדקת!");
+            lblIsRight.setText("נכון מאוד!");
         } else
         {
-            lblIsRight.setText("טעית ובענק!");
+            lblIsRight.setText("אופס... טעות :(");
         }
         TextView lblDetails = (TextView) v.findViewById(R.id.lblDetails);
         lblDetails.setText(mDetails);
