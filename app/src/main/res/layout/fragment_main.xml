@@ -5,10 +5,16 @@
     android:id="@+id/list"
     android:name="com.example.queenb.main_fragment.MainFragment"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="32dp"
-    android:layout_marginRight="32dp"
-    android:paddingTop="270dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:alpha="0.6"
+    android:background="@drawable/background1"
     app:layoutManager="LinearLayoutManager"
     tools:context=".main_fragment.MainFragment"
-    tools:listitem="@layout/fragment_main_item" />
+    tools:listitem="@layout/fragment_main_item">
+
+
+</androidx.recyclerview.widget.RecyclerView>
+
+

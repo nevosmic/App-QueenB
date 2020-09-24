@@ -11,9 +11,12 @@ public class TriviaQuestion
     private String opD;
     private String answer;
     private String details;
+    private int questionIm;
+    private int answerIm;
 
     //class constructor
-    public TriviaQuestion(String question, String op_a, String op_b, String op_c, String op_d, String ans, String details)
+    public TriviaQuestion(String question, String op_a, String op_b, String op_c, String op_d,
+                          String ans, String details, int questionIm, int answerIm)
     {
         this.question = question;
         this.opA = op_a;
@@ -22,6 +25,8 @@ public class TriviaQuestion
         this.opD = op_d;
         this.answer = ans;
         this.details = details;
+        this.questionIm = questionIm;
+        this.answerIm = answerIm;
     }
 
     public TriviaQuestion() {
@@ -31,6 +36,8 @@ public class TriviaQuestion
         this.opC = "";
         this.opD = "";
         this.answer = "";
+        this.questionIm = 0;
+        this.answerIm = 0;
     }
 
     public String getQuestion() {
@@ -70,6 +77,10 @@ public class TriviaQuestion
     public String getAnswer() {
         return this.answer;
     }
+
+    public int getQuestionIm() {return this.questionIm;}
+
+    public int getAnswerIm() {return this.answerIm;}
 
     public void setQuestion(String q1) {
         this.question = q1;

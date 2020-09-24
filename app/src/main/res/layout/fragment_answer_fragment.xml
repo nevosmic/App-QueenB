@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:layout_gravity="center"
     tools:context=".trivia.AnswerFragment">
 
     <LinearLayout
@@ -11,41 +13,32 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/lblIsRight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                tools:src="@android:drawable/alert_light_frame" />
-
-            <TextView
-                android:id="@+id/lblIsRight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right|center_vertical"
-                android:paddingRight="16dp"
-                android:text="TextView" />
-
-        </LinearLayout>
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingRight="16dp"
+            android:text="TextView"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/lblDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:gravity="center"
-            android:text="TextView\naasfasf\n\n\n\nasf" />
+            android:gravity="center|right"
+            android:text="TextView\naasfasf\n\n\n\nasf"
+            android:textSize="18sp" />
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/aIm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
             tools:src="@tools:sample/avatars" />
 
         <Button
@@ -53,9 +46,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_margin="32dp"
+            android:layout_margin="16dp"
             android:gravity="center"
-            android:text="לשאלה הבאה" />
+            android:text="לשאלה הבאה"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

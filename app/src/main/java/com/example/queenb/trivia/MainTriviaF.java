@@ -16,6 +16,7 @@ public class MainTriviaF extends Fragment {
     private static final ArrayList<TriviaQuestion> mTriviaQuestionsPool = new ArrayList<TriviaQuestion>();
     private int cur_question_id = 0;
     private QuestionFragment cur_qf;
+    private AnswerFragment cur_af;
     private static enum State {INIT, OPENED_QUESTION, OPENED_ANSWER};
     private State state;
     static {
@@ -25,8 +26,10 @@ public class MainTriviaF extends Fragment {
                 "נטע ברזילי",
                 "קרין גורן",
                 "קרין גורן",
-                "היא אמנם ידועה כשפית וקונדיטורית מהמצליחות בארץ\n"
-                + "אבל מסתבר, שלפני כל זה, קרין גורן למדה הנדסת תוכנה, והיתה מפתחת תוכנה בסטארט אפ!"));
+                "היא אמנם ידועה כשפית וקונדיטורית מהמצליחות בארץ...\n"
+                + "אבל מסתבר, שלפני כל זה, קרין גורן למדה הנדסת תוכנה, והיתה מפתחת תוכנה בסטארט אפ!",
+                R.drawable.trivia_q1_karin_goren_q,
+                R.drawable.trivia_a1_karin));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("מה ההגדרה המתאימה לסטארט-אפ?",
                 "עסק חדש, כמו מכולת, מסעדה או מעדניה",
@@ -34,9 +37,11 @@ public class MainTriviaF extends Fragment {
                 "כשבחור מתחיל איתך ב pick-up bar (סטארט עבור מתחיל, וup עבור pick-up)",
                 "כל חברת הייטק, כמו Google, Facebook, Amazon",
                 "חברה שמתחילה עם מעט אנשים וכסף במטרה לממש רעיון או מוצר יחודי וחדשני",
-                "סטארט-אפ היא חברה קטנה בתחילת דרכה, בעלת רעיון למוצר חדשני שיכול לשנות את חייהם של אנשים\n " +
-                        "כזה שיכול לגרום לנו לתהות, איך הוא הוא לא היה קודם (למשל, Waze הישראלית התחילה כך)\n " +
-                        " וכזה שיכול להימכר לחברה גדולה בהמשך (למשל, את Waze רכשו גוגל)"));
+                "סטארט-אפ היא חברה קטנה בתחילת דרכה, בעלת רעיון למוצר חדשני שיכול לשנות את חייהם של אנשים, " +
+                        "כזה שיכול לגרום לנו לתהות, איך הוא הוא לא היה  קיים קודם.\n למשל, Waze הישראלית התחילה כך, " +
+                        "ובהמשך נמכרה לGoogle.",
+                R.drawable.trivia_q2_startup,
+                R.drawable.trivia_a2_waze_google));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("איזה מוצר מהבאים הוא חדשני ונמצא עכשיו בתהליך פיתוח?",
                 "אתר שמקבל מילת חיפוש, ומחזיר דפי אינטרנט רלוונטיים בהם מופיעה המילה",
@@ -44,12 +49,12 @@ public class MainTriviaF extends Fragment {
                 "תוכנה שלוקחת טוקבקים מאתרי חדשות ומרכיבה אותם לקטעי שירה שלאחר מכן מפרסמים בספרים",
                 "תוכנה שמחשבת כמה זה 1+1",
                 "תוכנה שלומדת (בעזרת למידת מכונה) מה עשוי להקל על מחלות כרוניות להן אין תרופה ידועה",
-                "לצערנו, לא ידועה תרופה לכל מחלה. אם היה לך מחלה כזו, מה היית עושה?\n" +
+                "לצערנו, לא ידועה תרופה לכל מחלה. אם לך היתה מחלה כזו, מה היית עושה?\n" +
                         "אולי היית מנסה למצוא אנשים עם בעיה דומה, ולראות אם יש דברים שעוזרים להם." + "\n" +
-                        "זה הרעיון מאחורי Stuff That Works, סטארפ אפ שמיצר תוכנה הלומדת מתוך עדויות רבות"+
-                        " על מצבים דומים לשלך, מה עשוי להקל עליך. \n" +
-                        "(מעניין לדעת שלא רק רופאים וכימאים יכולים לגלות תרופות, לא?)\n" +
-                        "וגם - המייסדת היא אישה, יעל אליש, לה היה תפקיד משמעותי מאוד בWaze.\n"
+                        "זה הרעיון מאחורי Stuff That Works, סטארפ אפ אותו יסדה יעל אליש, שמיצר תוכנה הלומדת מתוך עדויות רבות"+
+                        " על מצבים דומים לשלך, מה עשוי להקל עליך. \n",
+                R.drawable.trivia_q3_1_plus_1,
+                R.drawable.trivia_a3_stuff_that
         ));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("מה עדיף - מחשב או כסף?",
@@ -58,8 +63,10 @@ public class MainTriviaF extends Fragment {
                 "שניהם לא פותרים את כל הבעיות",
                 "שניהם פותרים את כל הבעיות",
                 "שניהם לא פותרים את כל הבעיות",
-                "זה טרם הוכח מדעית, אבל אנחנו מכירים מהחיים שלא ניתן לפתור כל דבר בכסף.\n " +
-                        "זה כן מוכח מדעית שיש בעיות אותן מחשב, לא משנה כמה מהיר או מתקדם, לעולם לא יוכל לפתור!"));
+                "זה טרם הוכח מדעית, אבל מהסתכלות סביבנו ניתן לראות שלא ניתן לפתור כל דבר בכסף.\n " +
+                        "זה כן מוכח מדעית שיש בעיות אותן מחשב, לא משנה כמה מהיר או מתקדם, לעולם לא יוכל לפתור!",
+                R.drawable.trivia_q4_money_vs_comp,
+                R.drawable.trivia_a4_money_vs_comp));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("מה זה קומפיילר?",
                 "מפלצת שוכנת נהר מסיפורי עם אותם נהוג לספר על העיר בלגרד",
@@ -71,9 +78,10 @@ public class MainTriviaF extends Fragment {
                         "לשפה בה מכונות מדברות.\n" +
                         "ובנימה אישית, אם הפחדנו אותך,\n" +
                         " בכל תחום חדש בחיים או שפה חדשה, לומדים מונח אחד כל פעם. " +
-                        "ואז, בהדרגה, ומה שמפחיד נהיה מוכר ורגיל, ומובן יותר כל הזמן.\n" +
-                        "מקוות שהבנת, ושלא תתני לאף אחד לאיים עליך במילים מתוחכמות!"
-        ));
+                        "ואז, בהדרגה, מה שמפחיד נהיה מוכר ורגיל, ומובן יותר כל הזמן." +
+                        "מקוות שהבנת, ושלא תתני לאף אחד לאיים עליך במילים מתוחכמות!",
+                R.drawable.trivia_q5_river_monster,
+                R.drawable.trivia_a5_monster));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("כמו שפות אנושיות, יש גם שפות מחשב רבות. באיזו שפת תכנות כותבת תמר רביניאן, " +
                 "המרגלת-לוחמת-הסייבר אותה מגלמת ניב סולטן בסדרה המצליחה 'טהרן'?",
@@ -83,7 +91,9 @@ public class MainTriviaF extends Fragment {
                 "Persian",
                 "Python",
                 "אם מתמקדים באחד הפריימים שמראים קוד תכנות בסדרה,\n " +
-                "ניתן להבחין שתמר רביניאן משתמשת בשפת Python!"));
+                    "ניתן להבחין שתמר רביניאן משתמשת בשפת Python!",
+                R.drawable.trivia_q6_tamer_rab,
+                R.drawable.trivia_a6_tamar_rab));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("מה ההבדל בין עוגיות לעוגה?",
                 "עוגיות עושים עם חמאה ועוגה עושים עם סוכר",
@@ -91,9 +101,11 @@ public class MainTriviaF extends Fragment {
                 "עוגות זה המזון היחידי שעוגיפלצת מוכן לאכול",
                 "עוגיות זה עוגה במנות אישיות",
                 "עוגיות זה מתוק אבל גם בשימוש באינטרנט, עוגה זה רק מתוק",
-                "אולי יצא לך להיתקל בהודעה בנוסח ,'אתר זה עושה שימוש בעוגיות'\n " +
-                        "עוגיות (Cookies) הן אמצעי בו אתרי אינטרנט נעזרים על מנת לזכור דברים שונים שקשורים לשימוש שלך באופן אישי.\n" +
-                        "למשל - את תכולת עגלת הקניות שלך באתר כמו Amazon או ASOS"));
+                "אולי יצא לך להיתקל בהודעה בנוסח ,'אתר זה עושה שימוש בעוגיות'.\n " +
+                        "עוגיות (Cookies) הן אמצעי בו אתרי אינטרנט נעזרים על מנת לזכור דברים שונים שקשורים לשימוש שלך באופן אישי." +
+                        "למשל - את תכולת עגלת הקניות שלך באתר כמו Amazon או .ASOS",
+                R.drawable.trivia_q7_cookieflezet,
+                R.drawable.trivia_a7_cookies));
 
         mTriviaQuestionsPool.add(new TriviaQuestion("איזה מההישגים הבאים שייך לאישה?",
                 "ההבנה שאפשר לקחת מכשיר המבצע חישובים כמו מחשבון, לצורך פעולות מסובכות ושימושיות יותר",
@@ -103,12 +115,13 @@ public class MainTriviaF extends Fragment {
                 "ההבנה שאפשר לקחת מכשיר המבצע חישובים כמו מחשבון, לצורך פעולות מסובכות ושימושיות יותר",
                 "תגידי, הסתכלת פעם על מחשבון וחשבת:\n" +
                         "אפשר לנצל את הפעולות שלו באופן מתוכנן, מסודר וחכם לצורך פעולות כמו...\n" +
-                        "צפייה בסרטים,\n" +
-                        "שליחת הודעות מקצה אחד של העולם לשני תוך שניות,\n"+
-                        "תכנון מסלול נסיעה\n" +
-                        "או כל שימוש מדהים אחר שניתן לעשות בעזרת מחשב?\n" + "\n" +
+                        "שליחת הודעות מקצה אחד של העולם לשני תוך שניות,"+
+                        "תכנון מסלול נסיעה" +
+                        "או כל שימוש מדהים אחר שניתן לעשות בעזרת מחשב?" + "\n" +
                         "עדה לאבלייס כן, והיא היתה הראשונה לעשות את זה, כבר בראשית המאה ה18! " +
-                        "היא נחשבת לראשונה אי-פעם שהבינה את הפוטנציאל של תוכנת מחשב. \n"));
+                        "היא נחשבת לראשונה אי-פעם שהבינה את הפוטנציאל של תוכנת מחשב. \n",
+                R.drawable.trivia_q8_static_benel,
+                R.drawable.trivia_a8_ada_lovelace));
 
 
         mTriviaQuestionsPool.add(new TriviaQuestion("למה קוראים לנו QueenB?",
@@ -117,7 +130,9 @@ public class MainTriviaF extends Fragment {
                 "הסיומת B נשמעת כמו Be, ולנו חשוב שתהיי את עצמך באופן הכי מלא שאת יכולה להיות, אחת שיודעת שהיא יכולה להיות מה שתבחר להיות",
                 "כל התשובות נכונות",
                 "כל התשובות נכונות",
-                "שם אחד והרבה משמעויות יפות וחזקות, לא?"));
+                "כל התשובות נכונות! \nמשמעויות רבות וחזקות עבור שם אחד, לא?",
+                R.drawable.trivia_q9_queenb,
+                R.drawable.trivia_a9_queenb));
     }
 
     public MainTriviaF() {
@@ -163,18 +178,46 @@ public class MainTriviaF extends Fragment {
     {
         state = State.OPENED_QUESTION;
         TriviaQuestion question = mTriviaQuestionsPool.get(qid);
-        cur_qf = QuestionFragment.newInstance(question.getQuestion(), question.getOptions());
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, cur_qf).addToBackStack(null).commit();
+
+        if (cur_af == null)
+        {
+            cur_qf = QuestionFragment.newInstance(question.getQuestion(), question.getOptions(), question.getQuestionIm());
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, cur_qf).addToBackStack(null).commit();
+        }
+        else
+        {
+            boolean isBack = cur_af.getIsBack();
+            if (isBack == true)
+            {
+                // Back button pressed
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+            else
+            {
+                cur_qf = QuestionFragment.newInstance(question.getQuestion(), question.getOptions(), question.getQuestionIm());
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, cur_qf).addToBackStack(null).commit();
+            }
+        }
+
     }
 
     private void openAnswer(int qid)
     {
         state = State.OPENED_ANSWER;
         TriviaQuestion question = mTriviaQuestionsPool.get(qid);
-        boolean isRight = question.getAnswer().equals(cur_qf.getSelectedAnswer());
 
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                AnswerFragment.newInstance(isRight, question.getDetails())).addToBackStack(null).commit();
+        String selectedAnswer = cur_qf.getSelectedAnswer();
+        if (selectedAnswer == null)
+        {
+            // Back button pressed
+            getActivity().getSupportFragmentManager().popBackStack();
+        } else
+        {
+            boolean isRight = question.getAnswer().equals(selectedAnswer);
+            cur_af = AnswerFragment.newInstance(isRight, question.getDetails(), question.getAnswerIm());
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, cur_af).addToBackStack(null).commit();
+        }
+
     }
 
     private void openFinal()
