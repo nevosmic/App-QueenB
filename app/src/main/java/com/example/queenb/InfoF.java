@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -24,10 +26,7 @@ public class InfoF extends Fragment {
     }
 
 
-    public static InfoF newInstance(String param1, String param2) {
-        InfoF fragment = new InfoF();
-        return fragment;
-    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,8 +76,8 @@ public class InfoF extends Fragment {
         beerSheva = view.findViewById(R.id.BeerSheva);
         String s1 = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
         String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n במוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳ \nקבוצת ממשיכות (כיתה ט׳) ביום ד׳\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        Drawable d1 = getResources().getDrawable(R.drawable.photo1);
-        Drawable d2 = getResources().getDrawable(R.drawable.photo2);
+        Drawable d1 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo1,getContext().getTheme() );
+        Drawable d2 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo2,getContext().getTheme() );
         setOnClick(beerSheva, s1, s2, d1,d2);
 
         jerusalem1 = view.findViewById(R.id.Jerusalem1);

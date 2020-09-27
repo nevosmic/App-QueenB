@@ -77,7 +77,7 @@ public class KimsF extends AppCompatActivity { // Fragment
             "את המדריכות ואת החברות",
             "ללמוד נושא שלא ידעתי קודם ולהכיר חברות חדשות."}; //todo EDIT what they wrote to be more official
 
-    String recommend_queenb[] = {"התכנית גרמה לי להתאהב במדעי המחשב, שזה תחום שלא הרבה בנות הולכות אליו, וזה לא כי הן לא יכולות. אני עכשיו בכיתה י' במגמת מדעי המחשב ואני מבינה כמה התכנית עזרה לי",
+    String recommendQueenb[] = {"התכנית גרמה לי להתאהב במדעי המחשב, שזה תחום שלא הרבה בנות הולכות אליו, וזה לא כי הן לא יכולות. אני עכשיו בכיתה י' במגמת מדעי המחשב ואני מבינה כמה התכנית עזרה לי",
             "אני עכשיו במגמת מדעי המחשב כולם נורא מסתבכים רק אני יושבת רגל על רגל כי סיימתי את כל התרגילים",
             "כי זה פותח כל כך הרבה דלתות בחיים ומראה עולם כל כך גדול ומעניין, הזדמנות ענקית לכל נערה להתאהב!",
             "קודם כל אין סיבה שלא ללכת! א. העצמה נשית זה תמיד טוב. ב. כיף ללמוד את החומר בצורה כל כך כיפיית ולהגיע לכיתה י כבר בשיעור הראשון את יכולה לעזור לחברות שמתקשות.",
@@ -118,7 +118,7 @@ public class KimsF extends AppCompatActivity { // Fragment
 
         for (int i = 0; i < names.length ; i++){
             ItemsModel itemsModel = new ItemsModel(names[i], ages[i], locations[i], images[i],
-                    phone_numbers[i], instagram_links[i], loved_about_queenb[i], recommend_queenb[i]); //todo try1+2
+                    phone_numbers[i], instagram_links[i], loved_about_queenb[i], recommendQueenb[i]); //todo try1+2
             listItem.add(itemsModel);
         }
         customAdapter = new CustomAdapter(listItem, this);
