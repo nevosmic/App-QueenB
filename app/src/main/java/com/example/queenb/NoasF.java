@@ -52,13 +52,16 @@ public class NoasF extends Fragment {
        // gallery.removeAllViews();
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
 
+        for(int i=0;i<7;i++){
+               View myView = layoutInflater.inflate(R.layout.item1, gallery,false);
+                //one image for example
+                int imageSource = R.drawable.q10;
+                ImageView image1 = myView.findViewById(R.id.imageView1);
+                image1.setImageResource(imageSource);
+                gallery.addView(myView);
+            }
 
-            View myView = layoutInflater.inflate(R.layout.item1, gallery,false);
-            //one image for example
-            int imageSource = R.drawable.q10;
-            ImageView image1 = myView.findViewById(R.id.imageView1);
-            image1.setImageResource(imageSource);
-            gallery.addView(myView);
+
 
 
     }
