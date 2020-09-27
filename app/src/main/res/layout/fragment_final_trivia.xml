@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_horizontal"
+    tools:context=".trivia.FinalTrivia">
+
+    <LinearLayout
+        android:id="@+id/LayoutFinal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/outOfQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:text="נגמרו לנו השאלות..!"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/doesntMatter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="16dp"
+            android:text="והאמת היא שלא משנה לנו על כמה שאלות ענית נכון.."
+            android:textSize="18sp"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/youQueen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:text="אנחנו בכל מקרה חושבות שאת מלכה!"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/crownIm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:src="@drawable/trivia_crown" />
+
+        <LinearLayout
+            android:id="@+id/goodbyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/happyIfTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="נהיה מאושרות אם תצטרפי אלינו!\n"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/trivia_q9_queenb" />
+
+            <TextView
+                android:id="@+id/joinUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="16dp"
+                android:text=" כי בתכלס -\n זה ביחד, זה כייף, זה מגניב, זה מעניין, זה חכם,\n אפשר ליצור בעזרת זה דברים שישנו את העולם,\n וזה יכול להביא אותך כל כך רחוק!\n "
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/finishBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="לחזרה למסך הראשי" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

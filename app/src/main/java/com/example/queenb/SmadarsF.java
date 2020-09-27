@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.queenb.trivia.MainTriviaF;
+
 
 public class SmadarsF extends Fragment
 {

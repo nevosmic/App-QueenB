@@ -15,7 +15,8 @@ import com.example.queenb.main_fragment.MainFragmentContent.MainFragmentButtonIt
 
 import java.util.List;
 
-public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFragmentRecyclerViewAdapter.ViewHolder> {
+public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFragmentRecyclerViewAdapter.ViewHolder>
+{
 
     private final List<MainFragmentButtonItem> mItems;
     private final FragmentActivity mActivity;
@@ -56,7 +57,8 @@ public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFr
         return mItems.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder
+    {
         public final View mView;
         public final Button mBtn;
         public MainFragmentButtonItem mItem;

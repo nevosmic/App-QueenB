@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trivia.QuestionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lblQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:paddingBottom="32dp"
+            android:text="TextView"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/qIm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            tools:src="@tools:sample/avatars" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="16dp"
+            android:checkedButton="@+id/radioBtnAns1"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart">
+
+            <RadioButton
+                android:id="@+id/radioBtnAns1"
+                style="@style/RadioButtonStyle" />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns2"
+                style="@style/RadioButtonStyle" />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns3"
+                style="@style/RadioButtonStyle" />
+
+            <RadioButton
+                android:id="@+id/radioBtnAns4"
+                style="@style/RadioButtonStyle" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:text="האם צדקת?"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</FrameLayout>
