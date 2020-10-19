@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WhoAreWe2"
+    android:background="@color/queenbPink"
     android:orientation="vertical"
-    android:background="@color/light_pink">
+    tools:context=".WhoAreWe2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,15 +14,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/light_pink"
+            android:background="@color/queenbPink"
             android:orientation="vertical">
-
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/light_pink"
+                android:background="@color/queenbPink"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -31,7 +30,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
-                    android:background="@color/light_pink"
+                    android:background="@color/queenbPink"
                     android:src="@drawable/q2" />
 
                 <TextView
@@ -60,7 +59,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="0dp"
                     android:layout_marginRight="20dp"
-                    android:background="@color/light_pink"
+                    android:background="@color/queenbPink"
 
                     android:src="@drawable/q10" />
             </LinearLayout>

@@ -17,7 +17,7 @@ public class MainTriviaF extends Fragment {
     private int cur_question_id = 0;
     private QuestionFragment cur_qf;
     private AnswerFragment cur_af;
-    private static enum State {INIT, OPENED_QUESTION, OPENED_ANSWER};
+    private static enum State {INIT, OPENED_QUESTION, OPENED_ANSWER, OPENED_FINAL};
     private State state;
     static {
         mTriviaQuestionsPool.add(new TriviaQuestion("מי מהנשים הבאות עבדה בעברה כמתכנתת?",
@@ -171,6 +171,10 @@ public class MainTriviaF extends Fragment {
                     openQuestion(cur_question_id);
                 }
                 break;
+            case OPENED_FINAL:
+                getActivity().getSupportFragmentManager().popBackStack();
+                break;
+
         }
     }
 
@@ -222,6 +226,7 @@ public class MainTriviaF extends Fragment {
 
     private void openFinal()
     {
+        state = State.OPENED_FINAL;
         Fragment finalLayout = FinalTrivia.newInstance();
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, finalLayout).addToBackStack(null).commit();
     }

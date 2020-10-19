@@ -1,12 +1,8 @@
 package com.example.queenb;
 
 import android.app.AlertDialog;
-
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
-import androidx.core.content.res.ResourcesCompat;
-import androidx.fragment.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +10,19 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.card.MaterialCardView;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class InfoF extends Fragment {
     //buttons
-    Button beerSheva,jerusalem1,jerusalem2,jerusalem3,modiin,telAviv1,telAviv2,hertzelia,kfarsaba,haifa1,haifa2;
+    Button jerusalem1,jerusalem2,jerusalem3,modiin,telAviv1,telAviv2,hertzelia,kfarsaba,haifa1,haifa2;
+    MaterialCardView beerSheva;
 
     public InfoF() {
         // Required empty public constructor
@@ -66,10 +69,18 @@ public class InfoF extends Fragment {
         List<InfoNode> myList = initInfo();
         for(InfoNode myNode : myList){
             int idnames=myNode.getIdName();
-            TextView myT=view.findViewById(idnames);
-            String sourceString = "<b>" +myNode.city + "</b> " +myNode.place;
-             myT.setText(sourceString);
-             myT.setText(Html.fromHtml(sourceString));
+            if (view.findViewById(idnames) instanceof TextView)
+            {
+                TextView myT=view.findViewById(idnames);
+
+                String sourceString = "<b>" +myNode.city + "</b> " +myNode.place;
+                myT.setText(sourceString);
+                myT.setText(Html.fromHtml(sourceString));
+            }
+            else if(view.findViewById(idnames) instanceof MaterialCardView)
+            {
+
+            }
         }
 
 
@@ -78,7 +89,7 @@ public class InfoF extends Fragment {
         String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n במוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳ \nקבוצת ממשיכות (כיתה ט׳) ביום ד׳\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
         Drawable d1 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo1,getContext().getTheme() );
         Drawable d2 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo2,getContext().getTheme() );
-        setOnClick(beerSheva, s1, s2, d1,d2);
+        cardViewSetOnClick(beerSheva, s1, s2, d1,d2);
 
         jerusalem1 = view.findViewById(R.id.Jerusalem1);
         String s3 = "הפעילות תתקיים בקמפוס גבעת רם של האוניברסיטה העברית בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
@@ -141,7 +152,15 @@ public class InfoF extends Fragment {
 
         return output;
     }
+    private void cardViewSetOnClick(MaterialCardView btn,final String str1, final String str2, final Drawable d1, final Drawable d2){
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                showDialog(str1,str2,d1,d2);
+            }
+        });
+    }
     private void setOnClick(Button btn,final String str1, final String str2, final Drawable d1, final Drawable d2){
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

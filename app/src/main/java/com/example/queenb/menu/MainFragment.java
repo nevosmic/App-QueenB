@@ -1,4 +1,4 @@
-package com.example.queenb.main_fragment;
+package com.example.queenb.menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,14 +33,12 @@ public class MainFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.queenb_backdrop, container, false);
 
-        // Set the adapter
-        if (view instanceof RecyclerView)
-        {
-            RecyclerView recyclerView = (RecyclerView) view;
-            recyclerView.setAdapter(new MainFragmentRecyclerViewAdapter(getActivity(), MainFragmentContent.ITEMS));
-        }
+        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView.setAdapter(new MenuRecyclerViewAdapter(getActivity(), MenuContent.ITEMS));
         return view;
     }
+
+
 }

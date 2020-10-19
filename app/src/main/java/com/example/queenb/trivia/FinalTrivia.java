@@ -9,7 +9,6 @@ import android.widget.Button;
 import androidx.fragment.app.Fragment;
 
 import com.example.queenb.R;
-import com.example.queenb.main_fragment.MainFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,8 +48,7 @@ public class FinalTrivia extends Fragment {
             @Override
             public void onClick(View view)
             {
-                Fragment mainFragment = MainFragment.newInstance();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mainFragment).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().popBackStack();
             }
         });
 

@@ -3,6 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="jerusalem1">ירושלים</string>
+    <string name="jerusalem2">הר הצופים</string>
     <string name="string">Noa</string>
     <string name="photo2">string</string>
     <string name="photo1">string</string>
@@ -20,4 +21,10 @@
     <string name="who_are_we_3"></string>
     <string name="who_are_we_4">על אף שבגילאי היסודי הישגיהן של בנות זהים לאלו של בנים, הן מסתייגות מתחומים טכנולוגים ובמגמות מחשבים בתיכון ישנן רק כ-30% תלמידות. הרתיעה נמשכת גם בשלבי חיים מאוחרים יותר, ואחוז הנשים בתחומים אלו באקדמיה ובתעשייה אף נמוך מכך.</string>
     <string name="who_are_we_5">מטרת העמותה היא לייצר תחושת מסוגלות בקרב נערות ונשים לגבי יכולתן לעסוק בכל מקצוע שיבחרו. פעילותנו המרכזית היא תכנית מלגות שבה סטודנטיות למדעי המחשב מלמדות נערות בכיתה ח\' תכנות. במסגרת פעילות העמותה סטודנטיות למדעי המחשב זוכות לעבוד יחדיו וכן לקחת חלק באירועים משותפים. בכך אנחנו מקוות לייצר קבוצה חברתית מגובשת של נשים מוכשרות וחזקות.</string>
+
+    <string name="who_are_we">מי אנחנו?</string>
+    <string name="trivia">הטריויה שתשנה את חייך</string>
+    <string name="other_old_participants">האם כדאי להצטרף? אולי חניכה לשעבר תספר לך!</string>
+    <string name="projects">פרויקטים לדוגמה של חניכות</string>
+    <string name="sign_up">הירשמי עכשיו</string>
 </resources>

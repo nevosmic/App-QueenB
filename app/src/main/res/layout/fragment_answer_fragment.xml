@@ -41,7 +41,7 @@
             android:layout_weight="1"
             tools:src="@tools:sample/avatars" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_margin="16dp"
             android:gravity="center"
             android:text="לשאלה הבאה"
-            android:textSize="18sp" />
+            app:elevation="16dp" />
 
     </LinearLayout>
 

@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">@color/queenbGray</color>
+    <color name="colorPrimaryDark">@color/queenbPinkDark</color>
+    <color name="colorAccent">@color/queenbPink</color>
+    <color name="textColorPrimary">@color/queenbGray</color>
+    <color name="background">@color/queenbGraySuperLight</color>
+    <color name="buttonColor">@color/queenbPink</color>
+    <color name="buttonText">@color/queenbGray</color>
+
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="pink">#ff99dd</color>
-    <color name="light_pink">#ff99ff</color>
+    <color name="queenbGraySuperLight">#FAFAFA</color>
+    <color name="queenbGrayLight">#DBDBDB</color>
+    <color name="queenbGray">#606060</color>
+    <color name="queenbPink">#FABEBD</color>
+    <color name="queenbPinkDark">#EF9A9A</color>
+
+
 
 </resources>

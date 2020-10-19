@@ -11,10 +11,8 @@ import androidx.fragment.app.Fragment;
 import com.example.queenb.trivia.MainTriviaF;
 
 
-public class SmadarsF extends Fragment
-{
-    public SmadarsF()
-    {
+public class SmadarsF extends Fragment {
+    public SmadarsF() {
         // Required empty public constructor
     }
 
@@ -23,6 +21,7 @@ public class SmadarsF extends Fragment
         super.onCreate(savedInstanceState);
 
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,28 +31,11 @@ public class SmadarsF extends Fragment
         Button startTrivia = v.findViewById(R.id.startTrivia);
         startTrivia.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MainTriviaF()).addToBackStack(null).commit();
             }
         });
         return v;
     }
-    //=============== open source quiz ==============================
-
-
-/*
-    private void initViews() {
-        //initialize views here
-        playGame =(FButton)findViewById(R.id.playGame);
-        quit = (FButton) findViewById(R.id.quit);
-        tQ = (TextView)findViewById(R.id.tQ);
-
-        //Typeface - this is for fonts style
-        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/shablagooital.ttf");
-        playGame.setTypeface(typeface);
-        quit.setTypeface(typeface);
-        tQ.setTypeface(typeface);
-    }*/
 }

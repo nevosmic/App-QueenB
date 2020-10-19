@@ -1,4 +1,4 @@
-package com.example.queenb.main_fragment;
+package com.example.queenb.menu;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -10,25 +10,26 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.queenb.KimsF;
+import com.example.queenb.MainActivity;
 import com.example.queenb.R;
-import com.example.queenb.main_fragment.MainFragmentContent.MainFragmentButtonItem;
+import com.example.queenb.menu.MenuContent.MenuButtonItem;
 
 import java.util.List;
 
-public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFragmentRecyclerViewAdapter.ViewHolder>
+public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerViewAdapter.ViewHolder>
 {
 
-    private final List<MainFragmentButtonItem> mItems;
-    private final FragmentActivity mActivity;
-    public MainFragmentRecyclerViewAdapter(FragmentActivity activity, List<MainFragmentButtonItem> items) {
-        mActivity = activity;
+    private final List<MenuButtonItem> mItems;
+    private final MainActivity mActivity;
+    public MenuRecyclerViewAdapter(FragmentActivity activity, List<MenuButtonItem> items) {
+        mActivity = (MainActivity) activity;
         mItems = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_main_item, parent, false);
+                .inflate(R.layout.menu_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -44,6 +45,7 @@ public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFr
                     Intent intent = new Intent(mActivity, KimsF.class);
                     mActivity.startActivity(intent); //solution
                 } else {
+                    mActivity.mClickListener.emulateClick();
                     mActivity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             holder.mItem.destination).addToBackStack(null).commit();
                 }
@@ -61,7 +63,7 @@ public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFr
     {
         public final View mView;
         public final Button mBtn;
-        public MainFragmentButtonItem mItem;
+        public MenuButtonItem mItem;
 
         public ViewHolder(View view) {
             super(view);
@@ -69,4 +71,6 @@ public class MainFragmentRecyclerViewAdapter extends RecyclerView.Adapter<MainFr
             mBtn = (Button) view.findViewById(R.id.item_btn_id);
         }
     }
+
+
 }

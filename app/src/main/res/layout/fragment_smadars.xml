@@ -101,13 +101,14 @@
                 android:text="את הדברים האלה לא מלמדים בבית ספר, גברת!"
                 android:textSize="18sp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/startTrivia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal|center_vertical"
                 android:layout_marginTop="32dp"
-                android:text="בואי נראה אותך!" />
+                android:text="בואי נראה אותך!"
+                app:elevation="16dp" />
         </LinearLayout>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

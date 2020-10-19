@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".InfoF"
     android:orientation="vertical"
-    android:background="@drawable/background3"
     android:alpha="0.8">
     <ScrollView
         android:layout_width="match_parent"
@@ -18,8 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="לחצו על מוקד הפעילות הקרוב \n לביתכם לפרטים נוספים"
-                android:textColor="@color/white"
+                android:text="שמחים שאת מצטרפת אלינו! \n בחרי סניף"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textSize="25dp"
@@ -32,44 +31,54 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:columnCount="2"
-                android:columnOrderPreserved="false"
+                android:columnOrderPreserved="true"
                 android:rowCount="4">
 
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
-
-
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/BeerSheva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+                    android:clickable="true"
+                    android:focusable="true"
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard2"
-                            android:background="#fabebd">
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            app:srcCompat="@drawable/app_logo"
+                            android:scaleType="centerCrop"
+                            />
 
-                        </ImageView>
-
-                        <Button
-                            android:id="@+id/BeerSheva"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="באר שבע"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-                            android:background="#fabebd"
+                            android:orientation="vertical"
+                            android:padding="16dp">
 
-                            ></Button>
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/jerusalem1"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/jerusalem2"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary"
+                                />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+                </com.google.android.material.card.MaterialCardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
