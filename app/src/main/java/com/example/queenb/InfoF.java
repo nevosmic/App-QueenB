@@ -1,14 +1,14 @@
 package com.example.queenb;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.core.content.res.ResourcesCompat;
@@ -19,16 +19,15 @@ import com.google.android.material.card.MaterialCardView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InfoF extends Fragment {
+public class InfoF extends Fragment
+{
     //buttons
-    Button jerusalem1,jerusalem2,jerusalem3,modiin,telAviv1,telAviv2,hertzelia,kfarsaba,haifa1,haifa2;
-    MaterialCardView beerSheva;
+    MaterialCardView beerSheva,jerusalem1,jerusalem2,jerusalem3,modiin,telAviv1,telAviv2,hertzelia,kfarsaba,haifa1,haifa2;
 
-    public InfoF() {
+    public InfoF()
+    {
         // Required empty public constructor
     }
-
-
 
 
     @Override
@@ -36,20 +35,22 @@ public class InfoF extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-    void showDialog(String myText, String myText2, Drawable myImg,Drawable myImg2){
+    //happens when clicking on one of the card views, shows the details
+    void showDialog(String myText, String myText2, String myText3, String myText4){
         
         LayoutInflater inflater = LayoutInflater.from(this.getActivity());
         View view=inflater.inflate(R.layout.alert_dialog, null);
-        
-        ImageView imageView =(ImageView)view.findViewById(R.id.img);
-        ImageView imageView2 =(ImageView)view.findViewById(R.id.img2);
-        imageView.setImageDrawable(myImg);
-        imageView2.setImageDrawable(myImg2);
 
-        TextView mytext = (TextView)view.findViewById(R.id.mytext) ;
-        TextView mytext2 =  (TextView)view.findViewById(R.id.mytext2);
-        mytext.setText(myText);
-        mytext2.setText(myText2);
+        TextView where = (TextView)view.findViewById(R.id.where) ;
+        TextView when =  (TextView)view.findViewById(R.id.when);
+        TextView what =  (TextView)view.findViewById(R.id.what);
+        TextView who =  (TextView)view.findViewById(R.id.who);
+
+
+        where.setText(myText);
+        when.setText(myText2);
+        what.setText(myText3);
+        who.setText(myText4);
 
         AlertDialog alertDialog=new AlertDialog.Builder(this.getActivity())
                 .setView(view)
@@ -85,53 +86,71 @@ public class InfoF extends Fragment {
 
 
         beerSheva = view.findViewById(R.id.BeerSheva);
-        String s1 = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s2 = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n במוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳/ב׳ \nקבוצת ממשיכות (כיתה ט׳) ביום ד׳\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        Drawable d1 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo1,getContext().getTheme() );
+        String where = "הפעילות תתקיים באוניברסיטת בן-גוריון בבאר-שבע." +
+                " במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        String when = "אחת לשבוע בין השעות 17:00-20:00. " +
+                "יפתחו קבוצות למתחילות (כיתה ח׳) בימים א׳/ב׳," +
+                "וקבוצת ממשיכות (כיתה ט׳) ביום ד׳.";
+        String what = "תכנות בשפת Java Script.";
+        String who = "אין מבחני קבלה, אין צורך בידע קודם, או בידע מעמיק במתמטיקה או במחשבים!";
         Drawable d2 = ResourcesCompat.getDrawable(getResources(),R.drawable.photo2,getContext().getTheme() );
-        cardViewSetOnClick(beerSheva, s1, s2, d1,d2);
+        cardViewSetOnClick(beerSheva, where, when, what, who);
 
         jerusalem1 = view.findViewById(R.id.Jerusalem1);
-        String s3 = "הפעילות תתקיים בקמפוס גבעת רם של האוניברסיטה העברית בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s4 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳, ב׳, ד׳ וה׳ \nקבוצות ממשיכות (כיתה ט׳) \nקבוצת למידה (כיתה י׳) ביום ב׳/ד׳ \n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(jerusalem1, s3, s4, d1,d2);
+        where = "קמפוס גבעת רם של האוניברסיטה העברית בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when ="אחת לשבוע בין השעות 17:00-20:00. יפתחו קבוצות מתחילות (כיתה ח׳) בימים א׳, ב׳, ד׳ וה׳, קבוצות ממשיכות (כיתה ט׳) וקבוצת למידה (כיתה י׳) ביום ב׳/ד׳.";
+        cardViewSetOnClick(jerusalem1, where, when, what, who);
 
         jerusalem2 = view.findViewById(R.id.Jerusalem2);
-        String s5 = "הפעילות תתקיים במרכז החדשנות גוננים בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s6 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nההרשמה למוקד זה תפתח בקרוב.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(jerusalem2, s5, s6, d1,d2);
+        where = "במרכז החדשנות גוננים בירושלים. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when ="אחת לשבוע בין השעות 17:00-20:00. ההרשמה למוקד זה תפתח בקרוב.";
+        cardViewSetOnClick(jerusalem2, where, when, what, who);
 
         jerusalem3 = view.findViewById(R.id.Jerusalem3);
-        String s7 = "מיקום הפעילות יפורסם בהמשך.";
-        String s8 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nיום הפעילות יפורסם בהמשך.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(jerusalem3, s7, s8, d1,d2);
+        where = "מזרח העיר, מיקום מדויק יפורסם בהמשך.";
+        when ="אחת לשבוע בין השעות 17:00-20:00. יום הפעילות יפורסם בהמשך.";
+        cardViewSetOnClick(jerusalem3, where, when, what, who);
 
         modiin = view.findViewById(R.id.Modiin);
-        String s9 = "הפעילות תתקיים באופן מקוון\nההרשמה פתוחה לתושבות איזור חבל מודיעין בלבד.";
-        String s10 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00.\n\nקבוצת מתחילות (כיתה ח')ביום ב'.\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(modiin, s9, s10, d1,d2);
-        telAviv1 = view.findViewById(R.id.TelAviv1);
-        setOnClick(telAviv1, s7, s8, d1,d2);
-        telAviv2 = view.findViewById(R.id.TelAviv2);
-        String s11 = "הפעילות תתקיים באוניברסיטת תל-אביב. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s12 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א׳ וה' \nקבוצות ממשיכות (כיתה ט׳) בימים א' וה' \nמרכז למידה (כיתה י׳) בשרונה האב בימי א'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(telAviv2, s11, s12, d1,d2);
-        hertzelia = view.findViewById(R.id.Hertzelia);
-        String s13 = "הפעילות תתקיים במשרדי חברת מיקרוסופט בהרצליה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s14 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד תפתח קבוצת מתחילות (כיתה ח') ביום ב'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(hertzelia, s11, s12, d1,d2);
-        kfarsaba = view.findViewById(R.id.KfarSaba);
-        String s15 ="הפעילות תתקיים במשרדי חברת ווסטרן דיגיטל בכפר-סבא. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s16 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצת מתחילות (כיתה ח׳) בעברית ביום ד' \nקבוצת מתחילות (כיתה ח׳) בערבית ביום ד' \nקבוצת ממשיכות (כיתה ט׳) דו-לשונית ביום ד'\n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(kfarsaba, s15, s16, d1,d2);
-        haifa1 = view.findViewById(R.id.Haifa1);
-        String s17 ="הפעילות תתקיים בקמפוס הטכניון בחיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-        String s18 ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00 \nבמוקד יפתחו \nקבוצות מתחילות (כיתה ח׳) בימים א' וה' \nקבוצות ממשיכות (כיתה ט׳) בימים א' וה' \n\nהחניכות ילמדו תכנות בשפת Java Script, בהדרכת מלגאיות שהן סטודנטיות למדעי המחשב והנדסה. אין מבחני קבלה, אין צורך בידע קודם, אין צורך בידע מעמיק במתמטיקה או במחשבים";
-        setOnClick(haifa1, s17, s18, d1,d2);
-        haifa2 = view.findViewById(R.id.Haifa2);
-        String s19 ="הפעילות תתקיים באוניברסיטת חיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
-       setOnClick(haifa2, s19, s6, d1,d2);
+        where = "הפעילות תתקיים באופן מקוון. ההרשמה פתוחה לתושבות איזור חבל מודיעין בלבד.";
+        when ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. תיפתח קבוצת מתחילות (כיתה ח')ביום ב'.";
+        cardViewSetOnClick(modiin, where, when, what, who);
 
+        telAviv1 = view.findViewById(R.id.TelAviv1);
+        where = "תל אביב, מיקום הפעילות יפורסם בהמשך.";
+        when ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. יום הפעילות יפורסם בהמשך";
+        cardViewSetOnClick(telAviv1, where, when, what, who);
+
+        telAviv2 = view.findViewById(R.id.TelAviv2);
+        where = "אוניברסיטת תל-אביב. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. יפתחו קבוצות מתחילות (כיתה ח׳) בימים א׳ וה, קבוצות ממשיכות (כיתה ט׳) בימים א' וה' ומרכז למידה (כיתה י׳) בשרונה האב בימי א'.";
+        cardViewSetOnClick(telAviv2, where, when, what, who);
+
+        hertzelia = view.findViewById(R.id.Hertzelia);
+        where = "הפעילות תתקיים במשרדי חברת מיקרוסופט בהרצליה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. תפתח קבוצת מתחילות (כיתה ח') ביום ב'.'";
+        cardViewSetOnClick(hertzelia, where, when, what, who);
+
+        kfarsaba = view.findViewById(R.id.KfarSaba);
+        where ="הפעילות תתקיים במשרדי חברת ווסטרן דיגיטל בכפר-סבא. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. במוקד יפתחו קבוצת מתחילות (כיתה ח׳) בעברית ביום ד', קבוצת מתחילות (כיתה ח׳) בערבית ביום ד' וקבוצת ממשיכות (כיתה ט׳) דו-לשונית ביום ד'.";
+        cardViewSetOnClick(kfarsaba, where, when, what, who);
+
+        haifa1 = view.findViewById(R.id.Haifa1);
+        where ="הפעילות תתקיים בקמפוס הטכניון בחיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        when ="המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. במוקד יפתחו קבוצות מתחילות (כיתה ח׳) בימים א' וה' וקבוצות ממשיכות (כיתה ט׳) בימים א' וה' ";
+        cardViewSetOnClick(haifa1, where, when, what, who);
+
+        haifa2 = view.findViewById(R.id.Haifa2);
+        when = "המפגשים מתקיימים אחת לשבוע בין השעות 17:00-20:00. ההרשמה למוקד זה תפתח בקרוב.";
+        where ="אוניברסיטת חיפה. במידת הצורך ובכפוף להנחיות משרד החינוך והבריאות הפעילות תתקיים באופן מקוון.";
+        cardViewSetOnClick(haifa2, where, when, what, who);
+
+        view.findViewById(R.id.registerNow).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                registerButton();
+            }
+        });
         // Inflate the layout for this fragment
         return view;
 
@@ -152,23 +171,20 @@ public class InfoF extends Fragment {
 
         return output;
     }
-    private void cardViewSetOnClick(MaterialCardView btn,final String str1, final String str2, final Drawable d1, final Drawable d2){
+    private void cardViewSetOnClick(MaterialCardView btn,final String str1, final String str2, final String str3, final String str4){
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                showDialog(str1,str2,d1,d2);
+                showDialog(str1, str2, str3, str4);
             }
         });
     }
-    private void setOnClick(Button btn,final String str1, final String str2, final Drawable d1, final Drawable d2){
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                showDialog(str1,str2,d1,d2);
-            }
-        });
+    public void registerButton() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.queenb.org.il/signup"));
+        startActivity(intent);
     }
+
 
 }

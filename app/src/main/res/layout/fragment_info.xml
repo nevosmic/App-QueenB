@@ -1,46 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".InfoF"
+    android:layout_gravity="right"
+    android:alpha="0.8"
     android:orientation="vertical"
-    android:alpha="0.8">
+    tools:context=".InfoF"
+    >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="16dp"
+                android:text="שמחות שאת מצטרפת אלינו!"
+                android:textSize="30dp"
+                android:textStyle="bold">
+
+            </TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="שמחים שאת מצטרפת אלינו! \n בחרי סניף"
                 android:layout_gravity="center_horizontal"
-                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+
+                android:text="בחרי מוקד פעילות"
                 android:textSize="25dp"
                 android:textStyle="bold">
 
             </TextView>
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="5dp"
+                android:layout_gravity="center|center_horizontal"
                 android:columnCount="2"
                 android:columnOrderPreserved="true"
-                android:rowCount="4">
+                android:useDefaultMargins="true"
+                android:layoutDirection="rtl">
+
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/BeerSheva"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp">
-                    android:clickable="true"
-                    android:focusable="true"
+                    style="@style/materialCardViewBackgroundStyle"
+                    android:layout_width="170dp"
+                    android:layout_height="250dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            style="@style/materialCardViewImageStyle"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/city_beer_sheva" />
+
+                        <LinearLayout style="@style/materialCardViewLinearLayoutStyle">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:text="באר-שבע" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="אוניברסיטת בן גוריון" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Jerusalem1"
+                    style="@style/materialCardViewBackgroundStyle"
+                    android:layout_width="170dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            style="@style/materialCardViewImageStyle"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/city_jerusalem" />
+
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            android:layout_gravity="right">
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:layout_gravity="right"
+                                android:gravity="start"
+                                android:text="ירושלים" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                android:text="גבעת רם" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Jerusalem2"
+                    style="@style/materialCardViewBackgroundStyle"
+                   >
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -48,373 +141,323 @@
 
                         <!-- Media -->
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            app:srcCompat="@drawable/app_logo"
-                            android:scaleType="centerCrop"
-                            />
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_jerusalem" />
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
 
                             <!-- Title, secondary and supporting text -->
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/jerusalem1"
-                                android:textAppearance="?attr/textAppearanceHeadline6"
-                                />
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="ירושלים" />
+
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/jerusalem2"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                />
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="גוננים" />
                         </LinearLayout>
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp"
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Jerusalem3"
+                    style="@style/materialCardViewBackgroundStyle"
+                   >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_jerusalem" />
+
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="ירושלים" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="מזרח העיר" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Modiin"
+                    style="@style/materialCardViewBackgroundStyle"
+             >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_modiin" />
+
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                         >
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="מודיעין" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="באופן מקוון" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/TelAviv1"
+                    style="@style/materialCardViewBackgroundStyle"
+            >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
+                        <ImageView
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_tel_aviv" />
+
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
+
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="תל-אביב" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="דרום ומזרח העיר" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/TelAviv2"
+                    style="@style/materialCardViewBackgroundStyle"
                     >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard3"
-                            android:background="#fabebd">
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_tel_aviv" />
 
-                        </ImageView>
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
 
-                        <Button
-                            android:id="@+id/Jerusalem1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="ירושלים"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="תל אביב" />
 
-                            ></Button>
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="אוניברסיטת תל אביב" />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Hertzelia"
+                    style="@style/materialCardViewBackgroundStyle"
+                    >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd"
-                        >
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard5"
-                            android:background="#fabebd">
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_hertzlya" />
 
-                        </ImageView>
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
 
-                        <Button
-                            android:id="@+id/Jerusalem2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="ירושלים"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
 
-                            ></Button>
+                                android:text="הרצליה" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="Microsoft" />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/KfarSaba"
+                    style="@style/materialCardViewBackgroundStyle"
+                   >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard1"
-                            android:background="#fabebd">
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_kfar_sava" />
 
-                        </ImageView>
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
 
-                        <Button
-                            android:id="@+id/Jerusalem3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="ירושלים"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="כפר-סבא" />
 
-                            ></Button>
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="Western Digital" />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Haifa1"
+                    style="@style/materialCardViewBackgroundStyle"
+                    >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard6"
-                            android:background="#fabebd">
+                            style="@style/materialCardViewImageStyle"
+                            android:src="@drawable/city_haifa" />
 
-                        </ImageView>
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle">
 
-                        <Button
-                            android:id="@+id/Modiin"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="מודיעין"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-                            ></Button>
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="חיפה" />
+
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="הטכניון" />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Haifa2"
+                    style="@style/materialCardViewBackgroundStyle"
+                    >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard4"
-                            android:background="#fabebd">
-                        </ImageView>
+                            style="@style/materialCardViewImageStyle"
+                            android:layout_gravity="center|center_horizontal"
+                            android:src="@drawable/city_haifa" />
 
+                        <LinearLayout
+                            style="@style/materialCardViewLinearLayoutStyle"
+                            >
 
-                        <Button
-                            android:id="@+id/TelAviv1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="תל-אביב יפו"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-                            
+                            <!-- Title, secondary and supporting text -->
+                            <TextView
+                                style="@style/materialCardViewheadlineStyle"
+                                android:text="חיפה" />
 
-                            ></Button>
+                            <TextView
+                                style="@style/materialCardViewSecondaryheadlineStyle"
+                                android:text="אוניברסיטת חיפה" />
+                        </LinearLayout>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/registerNow"
+                    style="@style/Widget.queenb.materialCardViewBackgroundRegisterStyle"
+                    >
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard3"
-                            android:background="#fabebd">
-                        </ImageView>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-
-                        <Button
-                            android:id="@+id/TelAviv2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="תל-אביב יפו"
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            style="@style/materialCardViewheadlineStyle"
+                            android:textSize="16sp"
+                            android:text="הירשמי עכשיו!"
+                            android:textStyle="bold"
                             android:textColor="@color/white"
-                            android:textSize="19dp"
+                            android:layout_gravity="center_horizontal"/>
 
-                            ></Button>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
+                        <!-- Media -->
                         <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard5"
-                            android:background="#fabebd">
-                        </ImageView>
+                            style="@style/materialCardViewImageStyle"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center|center_horizontal"
+                            android:elevation="10dp"
+                            android:src="@drawable/trivia_q9_queenb" />
 
 
-                        <Button
-                            android:id="@+id/Hertzelia"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="הרצליה"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
 
-                            ></Button>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
 
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
+                </com.google.android.material.card.MaterialCardView>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard2"
-                            android:background="#fabebd">
-                        </ImageView>
-
-                        <Button
-                            android:id="@+id/KfarSaba"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="כפר-סבא"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-
-                            ></Button>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard1"
-                            android:background="#fabebd">
-                        </ImageView>
-
-                        <Button
-                            android:id="@+id/Haifa1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="חיפה"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-
-                            ></Button>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-
-                    android:layout_marginLeft="30dp"
-                    android:layout_margin="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:background="#fabebd">
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginLeft="@android:dimen/app_icon_size"
-                            android:src="@drawable/pinboard7"
-                            android:background="#fabebd">
-                        </ImageView>
-
-                        <Button
-                            android:id="@+id/Haifa2"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fabebd"
-                            android:text="חיפה"
-                            android:textColor="@color/white"
-                            android:textSize="19dp"
-
-                            ></Button>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
             </GridLayout>
 

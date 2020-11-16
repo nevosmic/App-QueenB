@@ -1,11 +1,9 @@
 package com.example.queenb;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -66,21 +64,21 @@ public class NoasF extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         LinearLayout gallery = view.findViewById(R.id.gallery);
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
-        int[] galleryIds = {R.drawable.gallery1, R.drawable.gallery2, R.drawable.gallery3,
-                R.drawable.gallery4, R.drawable.gallery5, R.drawable.gallery6, R.drawable.gallery7, R.drawable.gallery8};
-        LinearLayout.LayoutParams imParams =
-                new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                        LinearLayout.LayoutParams.MATCH_PARENT);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            imParams.setMarginEnd(8);
-        }
-        for (int i = 0; i < galleryIds.length; ++i)
-        {
-            ImageView image = new ImageView(getContext());
-            image.setImageResource(galleryIds[i]);
-            image.setAdjustViewBounds(true);
-            gallery.addView(image, imParams);
-        }
+        //int[] galleryIds = {R.drawable.gallery1, R.drawable.gallery2, R.drawable.gallery3,
+        //        R.drawable.gallery4, R.drawable.gallery5, R.drawable.gallery6, R.drawable.gallery7, R.drawable.gallery8};
+        //LinearLayout.LayoutParams imParams =
+         //       new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+         //               LinearLayout.LayoutParams.MATCH_PARENT);
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+        //    imParams.setMarginEnd(8);
+        //}
+        //for (int i = 0; i < galleryIds.length; ++i)
+        //{
+        //    ImageView image = new ImageView(getContext());
+        //    image.setImageResource(galleryIds[i]);
+         //   image.setAdjustViewBounds(true);
+         //   gallery.addView(image, imParams);
+        //}
     }
 
 
