@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,7 +34,7 @@ public class NoasF extends Fragment {
         View v = inflater.inflate(R.layout.fragment_noas, container, false);
 
         //set header text
-        String header_text = "ב2015 סטודנטיות למדעי המחשב והבחינו שיש מעט מדי נשים סביבן. " +
+        String header_text = "ב-2015 סטודנטיות למדעי המחשב התבוננו סביבן והבחינו, לצערן, שיש מעט מדי נשים סביבן. " +
                 "מתוך רצון לשנות מציאות זו קמה QueenB, כעמותה השמה לעצמה למטרה להעלות את הייצוג הנשי בתחום הטכנולוגי.";
         final TextView header = (TextView) v.findViewById(R.id.who_are_we);
         header.setText(header_text);
@@ -54,15 +53,13 @@ public class NoasF extends Fragment {
         final TextView elaboration1 = (TextView) v.findViewById(R.id.elaboration1);
         elaboration1.setText(elaboration1_text);
 
-
         return v;
-
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LinearLayout gallery = view.findViewById(R.id.gallery);
+
         LayoutInflater layoutInflater = LayoutInflater.from(getContext());
         //int[] galleryIds = {R.drawable.gallery1, R.drawable.gallery2, R.drawable.gallery3,
         //        R.drawable.gallery4, R.drawable.gallery5, R.drawable.gallery6, R.drawable.gallery7, R.drawable.gallery8};
@@ -80,6 +77,5 @@ public class NoasF extends Fragment {
          //   gallery.addView(image, imParams);
         //}
     }
-
 
 }

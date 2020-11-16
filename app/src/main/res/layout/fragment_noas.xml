@@ -3,33 +3,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
     android:orientation="vertical">
 
-    <HorizontalScrollView
-        android:id="@+id/who_are_we_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_weight="3"
-        android:fadeScrollbars="false"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        android:scrollbarStyle="outsideInset"
-        android:scrollbars="horizontal|none">
-
-        <LinearLayout
-            android:id="@+id/gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:orientation="horizontal" />
-    </HorizontalScrollView>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:fadeScrollbars="true"
         android:scrollbars="vertical">
 
@@ -39,17 +20,77 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/who_are_we_headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:gravity="center_horizontal"
+                android:text="מי אנחנו?"
+                android:textColor="@color/queenbBordo"
+                android:textSize="70sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/gallery7" />
+
+            <TextView
                 android:id="@+id/who_are_we"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8sp"
+                android:gravity="center_horizontal|fill_horizontal"
                 android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/elaboration1"
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/trivia_q9_queenb" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/gallery6" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8sp" />
+                android:orientation="vertical"
+                android:background="@color/queenbGray">
+
+                <TextView
+                    android:id="@+id/elaboration1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadingEdge="horizontal"
+                    android:gravity="fill_horizontal"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </LinearLayout>
+
+
+
     </ScrollView>
+
+
+
 </LinearLayout>
