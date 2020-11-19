@@ -1,9 +1,12 @@
 package com.example.queenb;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -32,7 +35,7 @@ public class NoasF extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_noas, container, false);
-
+        ImageButton facebook, insta, site;
         //set header text
         String header_text = "ב-2015 סטודנטיות למדעי המחשב התבוננו סביבן והבחינו, לצערן, שיש מעט מדי נשים סביבן. " +
                 "מתוך רצון לשנות מציאות זו קמה QueenB, כעמותה השמה לעצמה למטרה להעלות את הייצוג הנשי בתחום הטכנולוגי.";
@@ -52,7 +55,36 @@ public class NoasF extends Fragment {
                 " בכך אנחנו מקוות לייצר קבוצה חברתית מגובשת של נשים מוכשרות וחזקות.";
         final TextView elaboration1 = (TextView) v.findViewById(R.id.elaboration1);
         elaboration1.setText(elaboration1_text);
+        insta = v.findViewById(R.id.insta_button);
+        facebook = v.findViewById(R.id.facecbook);
+        site = v.findViewById(R.id.queenbSiteButton);
 
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/queenbprogram/"));
+                startActivity(intent);
+
+            }
+        });
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/queenb.program"));
+                startActivity(intent);
+
+            }
+        });
+
+        site.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.queenb.org.il/"));
+                startActivity(intent);
+
+            }
+        });
         return v;
     }
 

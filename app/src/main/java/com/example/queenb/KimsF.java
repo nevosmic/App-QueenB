@@ -1,24 +1,12 @@
 package com.example.queenb;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatDialogFragment;
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.view.ViewGroup;
-import android.widget.AdapterView; //todo check3
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -26,9 +14,16 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.card.MaterialCardView;
+
 import java.util.ArrayList;
 import java.util.List;
-public class KimsF extends AppCompatActivity { // Fragment
+
+public class KimsF extends Fragment { // Fragment
+
     ListView listview;
 
     int images[] = {R.drawable.magalofir, R.drawable.savyon, R.drawable.galiyefet, R.drawable.elizabethbr,
@@ -91,48 +86,50 @@ public class KimsF extends AppCompatActivity { // Fragment
             "אני ממליצה ללכת לקווין בי מכיון שלומדים נושא חדש ונוסף לכך זה פותח דלתות בהמשך."}; //todo EDIT what they wrote to be more official + מספר 11 כתבה לא יודעת במקור
 
     List<ItemsModel> listItem = new ArrayList<>();
-
     CustomAdapter customAdapter;
-
-
 
     public KimsF() {
         // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
-    //public static KimsF newInstance(String param1, String param2) {
-      //  KimsF fragment = new KimsF();
-        //Bundle args = new Bundle();
+    public static KimsF newInstance() {
+        KimsF fragment = new KimsF();
+        //the way to pass arguments between fragments
+        Bundle args = new Bundle();
 
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_kims);
+    }
 
-        listview = findViewById(R.id.listview);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_kims, container, false);
+
+
+        //initialization of the list view (list of buttons)
+        listview = v.findViewById(R.id.listview);
 
         for (int i = 0; i < names.length ; i++){
             ItemsModel itemsModel = new ItemsModel(names[i], ages[i], locations[i], images[i],
                     phone_numbers[i], instagram_links[i], loved_about_queenb[i], recommendQueenb[i]); //todo try1+2
             listItem.add(itemsModel);
         }
-        customAdapter = new CustomAdapter(listItem, this);
+        //required for handling the listView
+        customAdapter = new CustomAdapter(listItem, getActivity());
         listview.setAdapter(customAdapter);
+        return v;
     }
 
-    //@Override
-    //public View onCreateView(LayoutInflater inflater, ViewGroup container,
-      //                       Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_kims, container, false);
-    //}
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getActivity().getMenuInflater().inflate(R.menu.menu, menu);
         MenuItem menuItem = menu.findItem(R.id.searchView);
         SearchView searchView = (SearchView) menuItem.getActionView();
 
@@ -192,27 +189,39 @@ public class KimsF extends AppCompatActivity { // Fragment
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             View view = getLayoutInflater().inflate(R.layout.row_items, null);
-            ImageView imageView = view.findViewById(R.id.images); //todo images!! ???? minutes: 9:16
-            TextView itemName = view.findViewById(R.id.name);
-            TextView itemAge = view.findViewById(R.id.age);
-            TextView itemLocation = view.findViewById(R.id.location);
+            ImageView imageView = view.findViewById(R.id.images);
+            MaterialCardView card =view.findViewById(R.id.cardList);
+
+            TextView itemNameView = view.findViewById(R.id.name);
+            TextView itemAgeView = view.findViewById(R.id.age);
+            TextView itemLocationView = view.findViewById(R.id.location);
 
             imageView.setImageResource(itemsModelListFiltered.get(position).getImage_of_quote());
-            itemName.setText(itemsModelListFiltered.get(position).getName());
-            itemAge.setText(itemsModelListFiltered.get(position).getAge());
-            itemLocation.setText(itemsModelListFiltered.get(position).getLocation());
+            itemNameView.setText(itemsModelListFiltered.get(position).getName());
+            itemAgeView.setText(itemsModelListFiltered.get(position).getAge());
+            itemLocationView.setText(itemsModelListFiltered.get(position).getLocation());
 
-            view.setOnClickListener(new View.OnClickListener() {
+            card.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(KimsF.this,
-                            ItemViewActivity.class).putExtra("item", itemsModelListFiltered.get(position)));
+
+                    //passing the data about the specific girl to the other fragment
+                    ItemsModel item = itemsModelListFiltered.get(position);
+                    ItemViewF itemViewGirl = new ItemViewF();
+                    Bundle args = new Bundle();
+                    args.putSerializable("item", item);
+                    itemViewGirl.setArguments(args);
+
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            itemViewGirl).addToBackStack(null).commit();
                 }
             });
 
             return view;
         }
 
+
+        //for searching
         @Override
         public Filter getFilter() {
             Filter filter = new Filter() {

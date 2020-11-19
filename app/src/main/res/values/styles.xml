@@ -119,12 +119,55 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-
-
-
-
-
-    <style name="verticalLayoutStyle" parent="">
+    <!--styles for projects_fragment-->
+    <style name="materialCardViewProjectsStyle" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
 
     </style>
+
+    <!--styles for ItemView_fragment-->
+    <style name="nameAgeWhereStyle" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+
+    </style>
+
+    <style name="questionItemStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/queenbPink</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+    </style>
+
+    <style name="AnswerItemStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+    </style>
+
+    <style name="Widget.queenb.materialCardViewBackgroundGirlStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="cardBackgroundColor">@color/queenbGrayLight</item>
+    </style>
+
+
 </resources>

@@ -35,8 +35,8 @@
                 android:layout_marginRight="16dp"
                 android:gravity="center"
                 android:text="ברוכה הבאה \nלחידון הטריוויה הגדול\n של QueenB!"
-                android:textSize="24sp"
                 android:textColor="@color/queenbBordo"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <LinearLayout

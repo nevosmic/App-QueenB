@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fabebd"
     tools:context=".SharonsF">
 
     <ScrollView
@@ -18,167 +17,338 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/explain"
+                android:id="@+id/projects_headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8sp"
+                android:gravity="center_horizontal"
+                android:text="פרויקטים לדוגמה"
+                android:textColor="@color/queenbBordo"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/gallery5" />
+
+            <TextView
+                android:id="@+id/weInvite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="אנחנו מזמינות אתכן להתרשם מהפרויקטים שעליהן עבדו החניכות במהלך השנה"
+                android:text="אנו מזמינות אותך להתרשם מפרויקטים עליהן עבדו החניכות במהלך השנה!"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title" />
-
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project1"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project1"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project2"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project2"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project3"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project3"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project4"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project4"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project5"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project5"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project6"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project6"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project7"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project7"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project8"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project8"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project9"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/project9"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/project10"
-                android:layout_width="250dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="30dp"
-                android:src="@drawable/project10"
-                android:scaleType="fitXY"
-                android:background="#FFDDDD">
-
-            </androidx.appcompat.widget.AppCompatImageButton>
+                 />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/elaborationProjects"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="50dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:text="רוצה גם לבנות אתר משלך? הירשמי עכשיו והבטיחי את מקומך"
-                android:textSize="29sp">
+                android:text="החניכות שלנו, רובן ללא ידע קודם, הגו, חשבו, פיתחו, עיצבו ועבדו יחדיו על הפרויקטים, אותן אנו גאות להציג כאן!"
+                android:textSize="16sp"
+                />
 
-            </TextView>
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/trivia_q9_queenb" />
 
-            <Button
-                android:id="@+id/register"
-                android:layout_width="229dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="32dp"
-                android:background="@drawable/rounded_corners"
-                android:text="להרשמה"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project1"
 
-            </Button>
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project1" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project2"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project2" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project3"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project3" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project4"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project4" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project5"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project5" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project6"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project6" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project7"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project7" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project8"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project8" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project9"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project9" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/project10"
+
+                style="@style/materialCardViewProjectsStyle">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitXY"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/project10" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/queenbGray"
+                android:layout_marginTop="16dp"
+                >
+
+                <ImageView
+                    android:id="@+id/projectsInspire"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/projects_inspire" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="רוצה גם לבנות אתר משלך? \nנשמח שתצטרפי!"
+                    android:textSize="24sp"
+                    android:textColor="@color/white">
+
+                </TextView>
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="להרשמה"
+                  >
+
+                </Button>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:scaleType="fitXY"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/q13" />
+            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 </RelativeLayout>

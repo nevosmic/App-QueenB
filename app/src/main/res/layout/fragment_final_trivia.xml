@@ -76,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="נהיה מאושרות אם תצטרפי אלינו!\n"
+                android:textColor="@color/queenbBordo"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -94,7 +95,8 @@
                 android:layout_gravity="center"
                 android:paddingTop="16dp"
                 android:text=" כי בתכלס -\n זה ביחד, זה כייף, זה מגניב, זה מעניין, זה חכם,\n אפשר ליצור בעזרת זה דברים שישנו את העולם,\n וזה יכול להביא אותך כל כך רחוק!\n "
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="italic" />
 
         </LinearLayout>
 
