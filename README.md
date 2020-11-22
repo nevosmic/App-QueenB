@@ -10,5 +10,7 @@ The app is constituted by 5 pages:
 
 * Who are we page
 explains about QueenB organization. has styles logo buttons to instagram, facebook and official site page.
+&nbsp;
 ![ScreenShot](Snapshots/who_are_we1.jpg)
 ![ScreenShot](Snapshots/who_are_we2.jpg)
+&nbsp;
