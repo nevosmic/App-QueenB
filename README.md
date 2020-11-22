@@ -9,6 +9,6 @@ This app is written in Java for Android. It was done as a part of a voluntary pr
 The app is constituted by 5 pages:
 
 * Who are we page
-explains about QueenB organization.
+explains about QueenB organization. has styles logo buttons to instagram, facebook and official site page.
 ![ScreenShot](Snapshots/who_are_we1.jpg)
 ![ScreenShot](Snapshots/who_are_we2.jpg)
