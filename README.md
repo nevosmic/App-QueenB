@@ -10,4 +10,5 @@ The app is constituted by 5 pages:
 
 * Who are we page
 explains about QueenB organization.
-![Alt text](https://photos.google.com/photo/AF1QipNEcveGr8LNihOllQGRJ4o6l7UY9GZXf9McwoQn)
+![ScreenShot](Snapshots/who_are_we1.jpg)
+![ScreenShot](Snapshots/who_are_we2.jpg)
