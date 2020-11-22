@@ -10,5 +10,5 @@ The app is constituted by 5 pages:
 
 * Who are we page
 explains about QueenB organization.
-![ScreenShot](Snapshots/who_are_we1.jpg =500x)
-![ScreenShot](Snapshots/who_are_we2.jpg=500x)
+![ScreenShot](Snapshots/who_are_we1.jpg)
+![ScreenShot](Snapshots/who_are_we2.jpg)
