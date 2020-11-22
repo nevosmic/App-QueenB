@@ -10,7 +10,10 @@ The app is constituted by 5 pages:
 
 * Who are we page
 explains about QueenB organization. has styles logo buttons to instagram, facebook and official site page.
-&nbsp;
-![ScreenShot](Snapshots/who_are_we1.jpg)
-![ScreenShot](Snapshots/who_are_we2.jpg)
-&nbsp;
+
+![ScreenShot](Snapshots/who_are_we1.jpg "Who are we 1")
+![ScreenShot](Snapshots/who_are_we2.jpg "Who are we 2")
+
+* Trivia game
+Trivia game which is intended to be a fun an interactive part of the app, that will attempts to pass on that computer science is exiting and that also women can.
+![ScreenShot](Snapshots/trivia_front.jpg "trivia_front")
