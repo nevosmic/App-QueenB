@@ -16,19 +16,18 @@ The app is constituted by 5 pages: who are we, Trivia game, "QueenB embassy", pr
 
 ### 'Who are we' page
 
-explains about QueenB organization. has styles logo buttons to instagram, facebook and official site page.
+This page explains about QueenB organization. It feutures styled logo buttons to instagram, facebook and official site page.
 
 ![ScreenShot](Snapshots/who_are_we1.jpg "Who are we 1")
 ![ScreenShot](Snapshots/who_are_we2.jpg "Who are we 2")
 
 ### Trivia game
 
-Trivia game which is intended to be a fun an interactive part of the app, that attempts to pass on that computer science is exciting and that women fits it great.
+Trivia game which is intended to be a fun an interactive part of the app, that attempts to pass on that computer science is exciting and that women can be smply great in it.
 
 ![ScreenShot](Snapshots/trivia_front.jpg "trivia front")
 
-
-by pressing "start trivia", a series of light and funny questions apears. Here is one example:
+By pressing "start trivia", a series of light and funny questions apears. Here is one example:
 
 ![ScreenShot](Snapshots/trivia_q1.jpg "trivia q1")
 ![ScreenShot](Snapshots/trivia_a1.jpg "trivia a1")
@@ -44,7 +43,7 @@ A list of girls that were participants of this program and recommend it.
 
 ![ScreenShot](Snapshots/queenb_embassy.jpg "queenb_embassy")
 
-By clicking on a girl's card, one can see what she replied to the questions and what she thought of it. Plus, it can click on Instagram logo to see who she is or to contact her directly using the whatsupp logo. This opens whatsup and places a suggested message that a shy girl can use to open a conversation.
+By clicking on a girl's card, one can see what she replied to the questions and what she thought of it. Plus, one  can click on Instagram logo to see who she is or to contact her directly using the whatsupp logo. This opens the whatsup app and places a suggested message that a shy girl can use in order to open a conversation.
 
 ![ScreenShot](Snapshots/embassador.jpg "embassador")
 
