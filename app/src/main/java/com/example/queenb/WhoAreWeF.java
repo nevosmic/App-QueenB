@@ -14,16 +14,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-public class NoasF extends Fragment {
+public class WhoAreWeF extends Fragment {
 
    // private Button who_are_we;
-    public NoasF() {
+    public WhoAreWeF() {
         // Required empty public constructor
     }
 
 
-    public static NoasF newInstance(String param1, String param2) {
-        NoasF fragment = new NoasF();
+    public static WhoAreWeF newInstance(String param1, String param2) {
+        WhoAreWeF fragment = new WhoAreWeF();
         Bundle args = new Bundle();
 
         fragment.setArguments(args);
@@ -34,7 +34,7 @@ public class NoasF extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_noas, container, false);
+        View v = inflater.inflate(R.layout.fragment_who_are_we, container, false);
         ImageButton facebook, insta, site;
         //set header text
         String header_text = "ב-2015 סטודנטיות למדעי המחשב התבוננו סביבן והבחינו, לצערן, שיש מעט מדי נשים סביבן. " +

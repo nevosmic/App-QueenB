@@ -3,10 +3,10 @@ package com.example.queenb.menu;
 import androidx.fragment.app.Fragment;
 
 import com.example.queenb.InfoF;
-import com.example.queenb.KimsF;
-import com.example.queenb.NoasF;
-import com.example.queenb.SharonsF;
-import com.example.queenb.SmadarsF;
+import com.example.queenb.QueenBEmbassyF;
+import com.example.queenb.WhoAreWeF;
+import com.example.queenb.ProjectsF;
+import com.example.queenb.TriviaF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +14,11 @@ import java.util.List;
 public class MenuContent {
     public static final List<MenuButtonItem> ITEMS = new ArrayList<MenuButtonItem>();
     static {
-        ITEMS.add(new MenuButtonItem("מי אנחנו?", new NoasF()));
-        ITEMS.add(new MenuButtonItem("הטריויה שתשנה את חייך", new SmadarsF()));
+        ITEMS.add(new MenuButtonItem("מי אנחנו?", new WhoAreWeF()));
+        ITEMS.add(new MenuButtonItem("הטריויה שתשנה את חייך", new TriviaF()));
         //TODO: change the dest here to not null
-        ITEMS.add(new MenuButtonItem("לא בטוחה? אולי חניכה לשעבר תספר לך!", new KimsF()));
-        ITEMS.add(new MenuButtonItem("פרויקטים לדוגמה של חניכות", new SharonsF()));
-        //TODO: needed a line between those
+        ITEMS.add(new MenuButtonItem("לא בטוחה? אולי חניכה לשעבר תספר לך!", new QueenBEmbassyF()));
+        ITEMS.add(new MenuButtonItem("פרויקטים לדוגמה של חניכות", new ProjectsF()));
         ITEMS.add(new MenuButtonItem("הירשמי עכשיו", new InfoF()));
     }
 

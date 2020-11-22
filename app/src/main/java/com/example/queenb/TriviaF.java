@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment;
 import com.example.queenb.trivia.MainTriviaF;
 
 
-public class SmadarsF extends Fragment {
-    public SmadarsF() {
+public class TriviaF extends Fragment {
+    public TriviaF() {
         // Required empty public constructor
     }
 
@@ -26,7 +26,7 @@ public class SmadarsF extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // graphical initializations heres
-        View v = inflater.inflate(R.layout.fragment_smadars, container, false);
+        View v = inflater.inflate(R.layout.fragment_trivia_front, container, false);
         //PlayGame button - it will take you to the MainGameActivity
         Button startTrivia = v.findViewById(R.id.startTrivia);
         startTrivia.setOnClickListener(new View.OnClickListener() {

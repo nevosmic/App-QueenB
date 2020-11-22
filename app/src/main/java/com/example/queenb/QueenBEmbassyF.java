@@ -22,7 +22,7 @@ import com.google.android.material.card.MaterialCardView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KimsF extends Fragment { // Fragment
+public class QueenBEmbassyF extends Fragment { // Fragment
 
     ListView listview;
 
@@ -88,13 +88,13 @@ public class KimsF extends Fragment { // Fragment
     List<ItemsModel> listItem = new ArrayList<>();
     CustomAdapter customAdapter;
 
-    public KimsF() {
+    public QueenBEmbassyF() {
         // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
-    public static KimsF newInstance() {
-        KimsF fragment = new KimsF();
+    public static QueenBEmbassyF newInstance() {
+        QueenBEmbassyF fragment = new QueenBEmbassyF();
         //the way to pass arguments between fragments
         Bundle args = new Bundle();
 
@@ -111,7 +111,7 @@ public class KimsF extends Fragment { // Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_kims, container, false);
+        View v = inflater.inflate(R.layout.fragment_queenb_embassy, container, false);
 
 
         //initialization of the list view (list of buttons)
