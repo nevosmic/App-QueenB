@@ -12,11 +12,11 @@ Using the navigation logo that opens the bacdrop bar to see the contents.
 
 ## Contents
 
-The app is constituted by 5 pages: who are we, Trivia game, "QueenB embassy", projects and information and registration.
+The app is constituted by 5 pages: 'who are we', 'Trivia game', 'QueenB embassy', 'projects' and 'information and registration'.
 
-### 'Who are we' page
+### 'Who are we'
 
-This page explains about QueenB organization. It feutures styled logo buttons to instagram, facebook and official site page.
+This page explains about QueenB organization. It features styled logo buttons to instagram, facebook and official site page.
 
 ![ScreenShot](Snapshots/who_are_we1.jpg "Who are we 1")
 ![ScreenShot](Snapshots/who_are_we2.jpg "Who are we 2")
