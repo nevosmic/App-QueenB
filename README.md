@@ -4,7 +4,7 @@
 
 This app is written in Java for Android and designed using Material Design (Google) components. It was done as a part of a voluntary project for Queenb organization. The app's porpuse is to attract teeange girls to join programming Lessons.
 
-## Navgation
+## Navigation
 
 Using the navigation logo that opens the bacdrop bar to see the contents.
 
